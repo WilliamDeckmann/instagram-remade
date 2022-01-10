@@ -4,7 +4,6 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './templates/App';
 
-
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
