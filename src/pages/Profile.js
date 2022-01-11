@@ -2,22 +2,22 @@
 import { css, useTheme } from "@emotion/react";
 const Profile = () => {
 
-  const styles = css`
-      padding: 20px;
-      color: red;
+    const styles = css`
+        padding: 20px;
+        color: red;
 
-      .testname {
-        color: blue;
-      }
-  `;
+        .user {
+          color: blue;
+        }
+    `;
+
     return (
         <div css={styles}>
             "Profile"
-            <div className="testname">
-              "image"
+            <div className="user">
+              "user"
             </div>
         </div>
-
     );
 }
 
