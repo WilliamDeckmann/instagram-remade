@@ -1,9 +1,11 @@
+import Card from "./Card";
+
 const CardList = (props) => {
 
     return (
         <div className="Card-list">
             {props.data.map(card => (
-                <Card index={card.index} />
+                <Card {...card} key={card.id} />
             ))}
         </div>
     );
