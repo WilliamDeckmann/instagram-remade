@@ -1,63 +1,39 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
 import { Link } from "react-router-dom";
+import CommentInput from "../components/CommentInput";
+import PostDetails from "../components/PostDetails";
+import UserSection from "../components/UserSection";
 
 const Card = (props) => {
     const {id} = props;
     console.log(props);
 
     const styles = css`
+        max-width: 610px;
         display: flex;
         flex-direction: column;
+        border: 1px solid lightgrey;
 
-        .Card__header {
-            padding: 20px;
-        }
-
-        .Card__figure {
-            margin: 0;
-        }
+        .Card__link {
+            text-decoration: none;
+            color: black;
+        };
     `;
 
     return (
         <div className="Card" css={styles}>
-            <Link to="/">
+            <Link to="/" className="Card__link">
                 <header className="Card__header">
-                    <figure className="Card__figure">
-                        "user-img"
-                        "user-name"
-                    </figure>
-                    "settings"
+                    <UserSection />
                 </header>
                 <main className="Card__main">
                     <img src="" alt="image" className="Card__img"/>
-                    <section className="Card__section">
-                        <header className="Card__header">
-                            <section className="Card__left-section">
-                                "heart"
-                                "comments"
-                                "share"
-                            </section>
-                            <section className="Card__right-section">
-                                "bookmark"
-                            </section>
-                        </header>
-                        <article className="Card__article">
-                            <p className="Card__paragraph">
-                                "like-count"
-                                "semi-bold-text (synes godt om)"
-                            </p>
-                            <p className="Card__paragraph">
-                                "semi-bold-text ("user-name")"
-                                "text-body ("post-data")"
-                            </p>
-                            "post-date"
-                        </article>
-                        <footer className="Card__footer" >
-                            "comment-input"
-                        </footer>
-                    </section>
                 </main>
+                <footer className="Card__footer">
+                    <PostDetails />
+                    <CommentInput />
+                </footer>
             </Link>
         </div>
     );
