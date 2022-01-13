@@ -1,22 +1,18 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
+import CardContainer from "../templates/CardContainer";
+
 const Home = () => {
 
-    const Home = css`
-        padding: 20px;
-        color: red;
-
-        .container {
-          color: blue;
-        }
+    const Styles = css`
+        /* Style goes here */
     `;
 
     return (
-        <div css={Home}>
+        <div className="Home" css={Styles}>
             "Home"
-            <div className="container">
-              "container"
-            </div>
+
+            <CardContainer />
         </div>
     );
 }
