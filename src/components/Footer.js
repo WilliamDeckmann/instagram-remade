@@ -37,18 +37,14 @@ function Footer() {
         }
 
         .footer__item1, .footer__item2 {
-          font-size: 12px;
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-          line-height: 16px;
+            font-size: 12px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            line-height: 16px;
         }
 
         .langselector {
             display: flex;
             align-items: center;
-        }
-
-        .langselector__text {
-
         }
 
         .langselector__image {
@@ -76,8 +72,8 @@ function Footer() {
             </div>
             <div className="footer__item2">
                 <div className="langselector">
-                  <div className="langselector__text">English</div>
-                  <img src={arrow} className="langselector__image" />
+                    <div className="langselector__text">English</div>
+                    <img src={arrow} className="langselector__image" />
                 </div>
                 <div>© 2022 Instagram from Meta</div>
             </div>

@@ -9,6 +9,10 @@ import React from 'react';
 
 const Profile = () => {
 
+    //tilføj profile social stuff, som component
+
+    // lav gallery om til et component
+
     // object-fit: cover; + størrelse på billeder
 
     // black/grey versioner af følgende:
@@ -31,6 +35,8 @@ const Profile = () => {
             flex-direction: row;
             text-align: center;
             gap: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
             font-size: 12px;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
             line-height: 16px;
