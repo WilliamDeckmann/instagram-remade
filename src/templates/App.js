@@ -11,7 +11,7 @@ function App() {
   };
 
   return (
-    <ThemeProvider theme={main}>
+     <ThemeProvider theme={main}>
       <div className="App">
       "Navbar"
       <main className="Main">
@@ -22,7 +22,7 @@ function App() {
         </Routes>
       </main>
       </div>
-    </ThemeProvider>
+     </ThemeProvider>
   );
 }
 
