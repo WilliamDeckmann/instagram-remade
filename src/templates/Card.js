@@ -13,7 +13,8 @@ const Card = (props) => {
     console.log(props);
 
     const styles = css`
-        max-width: 610px;
+        max-width: 614px;
+        width: 100%;
         display: flex;
         flex-direction: column;
         border: 1px solid lightgrey;
