@@ -66,11 +66,11 @@ const Profile = () => {
                     <span>POSTS</span>
                 </div>
                 <div className="categorylist__item2">
-                    <img src={profilebubble} />
-                    <span>TAGGED</span>
+                    <img src={bookmark} />
+                    <span>Saved</span>
                 </div>
                 <div className="categorylist__item3">
-                    <img src={bookmark} />
+                    <img src={profilebubble} />
                     <span>TAGGED</span>
                 </div>
             </div>
