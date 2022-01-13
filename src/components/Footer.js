@@ -43,6 +43,15 @@ function Footer() {
         }
 
         .langselector {
+            display: flex;
+            align-items: center;
+        }
+
+        .langselector__text {
+
+        }
+
+        .langselector__image {
             transform: rotate(180deg);
             width: 12px;
             height: 12px;
@@ -66,7 +75,10 @@ function Footer() {
                 <div><a href="#">Instagram Lite</a></div>
             </div>
             <div className="footer__item2">
-                <div>English <img src={arrow} className="langselector" /></div>
+                <div className="langselector">
+                  <div className="langselector__text">English</div>
+                  <img src={arrow} className="langselector__image" />
+                </div>
                 <div>© 2022 Instagram from Meta</div>
             </div>
         </footer>

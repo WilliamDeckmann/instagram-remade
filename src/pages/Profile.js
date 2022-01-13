@@ -3,15 +3,18 @@ import { css, useTheme } from "@emotion/react";
 import gridcategory from './../assets/gridcategory.svg';
 import profilebubble from './../assets/profilebubble.svg';
 import WuGF06 from './../assets/WuGF06.jpg';
+import bookmark from './../assets/settingsbookmark.svg';
 import Footer from "../components/Footer";
 import React from 'react';
 
 const Profile = () => {
 
-    // mangler
-    // teste med rigtige billeder
-    // object-fit: cover;
-    // størrelse på billeder
+    // object-fit: cover; + størrelse på billeder
+
+    // black/grey versioner af følgende:
+    // settingsbookmark.svg
+    // profilebubble.svg
+    // gridcategory.svg
 
     const gallery = css`
 
@@ -41,14 +44,29 @@ const Profile = () => {
             gap: 10px;
         }
 
+        .categorylist__item1, .categorylist__item2, .categorylist__item3 {
+            display: flex;
+            align-items: center;
+        }
+
     `;
 
     return (
         <div css={gallery}>
             <hr />
             <div className="categorylist">
-                <div><img src={gridcategory} /> POSTS</div>
-                <div><img src={profilebubble} /> TAGGED</div>
+                <div className="categorylist__item1">
+                    <img src={gridcategory} />
+                    <span>POSTS</span>
+                </div>
+                <div className="categorylist__item2">
+                    <img src={profilebubble} />
+                    <span>TAGGED</span>
+                </div>
+                <div className="categorylist__item3">
+                    <img src={bookmark} />
+                    <span>TAGGED</span>
+                </div>
             </div>
             <div className="category">
                 <div><img src={WuGF06} /></div>
