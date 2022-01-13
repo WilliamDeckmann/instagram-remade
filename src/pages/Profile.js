@@ -4,6 +4,8 @@ import gridcategory from './../assets/gridcategory.svg';
 import profilebubble from './../assets/profilebubble.svg';
 import WuGF06 from './../assets/WuGF06.jpg';
 import arrow from './../assets/arrow.svg';
+import Footer from "../components/Footer";
+import React from 'react';
 const Profile = () => {
 
     // mangler
@@ -103,25 +105,29 @@ const Profile = () => {
                 <div className="category__item"><img src={WuGF06} /></div>
             </div>
             <footer>
-              <div className="footer__item1">
-                  <div><a href="#">Meta</a></div>
-                  <div><a href="#">About</a></div>
-                  <div><a href="#">Blog</a></div>
-                  <div><a href="#">Jobs</a></div>
-                  <div><a href="#">Help</a></div>
-                  <div><a href="#">API</a></div>
-                  <div><a href="#">Privacy</a></div>
-                  <div><a href="#">Terms</a></div>
-                  <div><a href="#">Top Accounts</a></div>
-                  <div><a href="#">Hashtags</a></div>
-                  <div><a href="#">Locations</a></div>
-                  <div><a href="#">Instagram Lite</a></div>
-              </div>
-              <div className="footer__item2">
-                  <div>English <img src={arrow} className="langselector" /></div>
-                  <div>© 2022 Instagram from Meta</div>
-              </div>
+                <div className="footer__item1">
+                    <div><a href="#">Meta</a></div>
+                    <div><a href="#">About</a></div>
+                    <div><a href="#">Blog</a></div>
+                    <div><a href="#">Jobs</a></div>
+                    <div><a href="#">Help</a></div>
+                    <div><a href="#">API</a></div>
+                    <div><a href="#">Privacy</a></div>
+                    <div><a href="#">Terms</a></div>
+                    <div><a href="#">Top Accounts</a></div>
+                    <div><a href="#">Hashtags</a></div>
+                    <div><a href="#">Locations</a></div>
+                    <div><a href="#">Instagram Lite</a></div>
+                </div>
+                <div className="footer__item2">
+                    <div>English <img src={arrow} className="langselector" /></div>
+                    <div>© 2022 Instagram from Meta</div>
+                </div>
             </footer>
+
+            <React.StrictMode>
+                <Footer />
+            </React.StrictMode>,
         </div>
     );
 }
