@@ -1,22 +1,79 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
+import gridcategory from './../assets/gridcategory.svg';
+import profilebubble from './../assets/profilebubble.svg';
+import WuGF06 from './../assets/WuGF06.jpg';
+import Footer from "../components/Footer";
+import React from 'react';
+
 const Profile = () => {
 
-    const styles = css`
-        padding: 20px;
-        color: red;
+    // mangler
+    // teste med rigtige billeder
+    // object-fit: cover;
+    // størrelse på billeder
 
-        .user {
-          color: blue;
+    const gallery = css`
+
+        hr {
+            height: 1px;
+            background: black;
+            width: 98%;
         }
+
+        .categorylist {
+            display: flex;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            flex-direction: row;
+            text-align: center;
+            gap: 20px;
+            font-size: 12px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            line-height: 16px;
+            font-weight: 600;
+        }
+
+        .category {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-items: center;
+            gap: 10px;
+        }
+
     `;
 
     return (
-        <div css={styles}>
-            "Profile"
-            <div className="user">
-              "user"
+        <div css={gallery}>
+            <hr />
+            <div className="categorylist">
+                <div><img src={gridcategory} /> POSTS</div>
+                <div><img src={profilebubble} /> TAGGED</div>
             </div>
+            <div className="category">
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+            </div>
+
+            <React.StrictMode>
+                <Footer />
+            </React.StrictMode>,
         </div>
     );
 }
