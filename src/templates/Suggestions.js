@@ -18,9 +18,24 @@ function suggestionProfile() {
         right:40px;
         font-size:14px;
         font-weight:600;
-        div{
+        max-width: 100%;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        .suggestions__Mainprofile_fullname{
           color:#8e8e8e;
           font-weight:400;
+        }
+        span{
+          max-width: 100%;
+          overflow: hidden;
+          white-space:nowrap;
+          a{
+            overflow-x:hidden;
+            text-overflow:ellipsis;
+            display: inline-block;
+            width: 100%;
+          }
         }
       }
 
@@ -75,6 +90,12 @@ function suggestionProfile() {
       }
 
 // Recommended profiles
+.container{
+} 
+
+.suggestions__profile_main{
+        max-width: 50%;
+}
       
 .suggestions__profiles_content{
         display:flex;
@@ -91,7 +112,16 @@ function suggestionProfile() {
         flex-direction: column;
         font-size:14px;
         font-weight:600;
-        div{
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        max-width: 47%;
+        span{
+          max-width: 100%;
+          overflow: hidden;
+          white-space:nowrap;
+        }
+        .suggestions__profiles_followedBy{
           color:#8e8e8e;
           font-weight:400;
         }
@@ -119,14 +149,17 @@ function suggestionProfile() {
 
     `;
     return (
-        <div className="suggestions__profile_main" css={styles}>
+
+      <div className="container" css={styles} style={{display: "flex", justifyContent:"space-around", width:'51.5vw', marginLeft: '20%'}}>
+
+        <div className="suggestions__profile_main">
           <div className="suggestions__Mainprofile_content">
             <div className="suggestions__Mainprofile_img">
                 <img src="https://via.placeholder.com/60" alt="Pfp" />
             </div>
             <div className="suggestions__Mainprofile_names">
-               <span><a href="#">-username-</a></span> 
-              <div>-usersfullname-</div>
+               <span><a href="#"><div style={{maxWidth: '20%', overflowWrap:"break-word"}}>-username-</div></a></span> 
+              <div className="suggestions__Mainprofile_fullname">-usersfullname-</div>
             </div>
             <div className="suggestions__Mainprofile_switch">
               <a href="#"><div>Switch</div></a>
@@ -143,8 +176,8 @@ function suggestionProfile() {
               <img src="https://via.placeholder.com/35" alt="Pfp" />
                 </div>
                 <div className="suggestions__profiles_namefollowed">
-                <span><a href="#">Profile_Name</a></span>
-                <div>Followed by</div>
+                <span><a href="#"><div style={{maxWidth: '20%', overflowWrap:"break-word"}}>Profile_Names</div></a></span>
+                <div className="suggestions__profiles_followedBy">Followed by</div>
                 </div>
                 <div className="suggestions__profile_follow">
               <a href="#"><div>Follow</div></a>
@@ -156,38 +189,17 @@ function suggestionProfile() {
               <img src="https://via.placeholder.com/35" alt="Pfp" />
                 </div>
                 <div className="suggestions__profiles_namefollowed">
-                <span><a href="#">Profile_Name</a></span>
-                <div>Followed by</div>
+                <span><a href="#"><div style={{maxWidth: '20%', overflowWrap:"break-word"}}>Profile_Names</div></a></span>
+                <div className="suggestions__profiles_followedBy">Followed by</div>
                 </div>
                 <div className="suggestions__profile_follow">
               <a href="#"><div>Follow</div></a>
             </div>
-              </div> 
-              <div className="suggestions__profiles_content">
-                <div className="suggestions__profiles_img">
-              <img src="https://via.placeholder.com/35" alt="Pfp" />
-                </div>
-                <div className="suggestions__profiles_namefollowed">
-                <span><a href="#">Profile_Name</a></span>
-                <div>Followed by</div>
-                </div>
-                <div className="suggestions__profile_follow">
-              <a href="#"><div>Follow</div></a>
-            </div>
-              </div>  
-              <div className="suggestions__profiles_content">
-                <div className="suggestions__profiles_img">
-              <img src="https://via.placeholder.com/35" alt="Pfp" />
-                </div>
-                <div className="suggestions__profiles_namefollowed">
-                <span><a href="#">Profile_Name</a></span>
-                <div>Followed by</div>
-                </div>
-                <div className="suggestions__profile_follow">
-              <a href="#"><div>Follow</div></a>
-            </div>
-              </div> 
-          </div>
+              </div>
+        </div>
+
+      </div>
+
     );
 }
 
