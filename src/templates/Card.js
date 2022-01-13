@@ -1,9 +1,12 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
-import { Link } from "react-router-dom";
 import CommentInput from "../components/CommentInput";
 import PostDetails from "../components/PostDetails";
+import PostImage from "../components/PostImage";
 import UserSection from "../components/UserSection";
+
+// Assets
+import Image from "../assets/image-test.jpg";
 
 const Card = (props) => {
     const {id} = props;
@@ -23,18 +26,16 @@ const Card = (props) => {
 
     return (
         <div className="Card" css={styles}>
-            <Link to="/" className="Card__link">
-                <header className="Card__header">
-                    <UserSection />
-                </header>
-                <main className="Card__main">
-                    <img src="" alt="image" className="Card__img"/>
-                </main>
-                <footer className="Card__footer">
-                    <PostDetails />
-                    <CommentInput />
-                </footer>
-            </Link>
+            <header className="Card__header">
+                <UserSection />
+            </header>
+            <main className="Card__main">
+                <PostImage img={Image} alt="image" />
+            </main>
+            <footer className="Card__footer">
+                <PostDetails />
+                <CommentInput />
+            </footer>
         </div>
     );
 }

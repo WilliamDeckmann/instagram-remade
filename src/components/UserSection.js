@@ -1,8 +1,11 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
 import BoldText from "./BoldText";
-import SocialIcon from "./SocialIcon";
 import UserIcon from "./UserIcon";
+import SocialIcon from "./SocialIcon";
+
+// Assets
+import Dots from "../assets/options.svg";
 
 const UserSection = () => {
 
@@ -32,11 +35,11 @@ const UserSection = () => {
 
         /* Imports */
         .User-icon {
-            max-width: 32px;
-            max-height: 32px;
+            width: 32px;
+            height: 32px;
         };
 
-        .Social-icon {
+        .dots {
             padding: 8px;
         };
     `;
@@ -50,7 +53,9 @@ const UserSection = () => {
                 </a>
             </section>
             <section className="User-section__right-section">
-                <SocialIcon img="" alt="dots" />
+                <div className="dots">
+                    <SocialIcon img={Dots} alt="dots" />
+                </div>
             </section>
         </div>
     );

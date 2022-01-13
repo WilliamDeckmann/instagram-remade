@@ -6,6 +6,12 @@ import ThinText from "./ThinText";
 import ReadMore from "./ReadMore";
 import DetailsText from "./DetailsText";
 
+// Assets
+import Heart from "../assets/heart.svg";
+import ChatBubble from "../assets/chatbubble.svg";
+import PaperPlane from "../assets/paperplane.svg";
+import SettingsBookmark from "../assets/settingsbookmark.svg";
+
 const PostDetails = () => {
 
     const styles = css`
@@ -15,6 +21,10 @@ const PostDetails = () => {
             padding: 6px 8px 8px 8px;
             display: flex;
             justify-content: space-between;
+        };
+
+        .Post-details__left-section {
+            display: flex;
         };
 
         .Post-details__article {
@@ -35,7 +45,19 @@ const PostDetails = () => {
 
 
         /* Imports */
-        .Social-icon {
+        .heart {
+            padding: 8px;
+        };
+
+        .comments {
+            padding: 8px;
+        };
+
+        .share {
+            padding: 8px;
+        };
+
+        .bookmark {
             padding: 8px;
         };
     `;
@@ -44,12 +66,20 @@ const PostDetails = () => {
         <div className="Post-details" css={styles}>
             <header className="Post-details__header">
                 <section className="Post-details__left-section">
-                    <SocialIcon img="" alt="heart" />
-                    <SocialIcon img="" alt="comments" />
-                    <SocialIcon img="" alt="share" />
+                    <div className="heart">
+                        <SocialIcon img={Heart} alt="heart" />
+                    </div>
+                    <div className="comments">
+                        <SocialIcon img={ChatBubble} alt="comments" /> 
+                    </div>
+                    <div className="share">
+                        <SocialIcon img={PaperPlane} alt="share" />
+                    </div>
                 </section>
                 <section className="Post-details__right-section">
-                    <SocialIcon img="" alt="bookmark" />
+                    <div className="bookmark">
+                        <SocialIcon img={SettingsBookmark} alt="bookmark" />
+                    </div>
                 </section>
             </header>
             <article className="Post-details__article">
