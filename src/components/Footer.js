@@ -15,12 +15,17 @@ function Footer() {
             justify-content: center;
             gap: 15px;
             color: #8e8e8e;
-            font-size: 12px;
             margin-bottom: 20px;
         }
 
-        .footer__item1 div a {
-            color: #8e8e8e;
+        .footer__item1 {
+            div {
+                a {
+                    color: #8e8e8e;
+                    text-decoration: none;
+                }
+            }
+
         }
 
         .footer__item2 {
@@ -29,7 +34,12 @@ function Footer() {
             justify-content: center;
             gap: 15px;
             color: #8e8e8e;
-            font-size: 12px;
+        }
+
+        .footer__item1, .footer__item2 {
+          font-size: 12px;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+          line-height: 16px;
         }
 
         .langselector {

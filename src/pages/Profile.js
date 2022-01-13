@@ -28,6 +28,10 @@ const Profile = () => {
             flex-direction: row;
             text-align: center;
             gap: 20px;
+            font-size: 12px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            line-height: 16px;
+            font-weight: 600;
         }
 
         .category {
