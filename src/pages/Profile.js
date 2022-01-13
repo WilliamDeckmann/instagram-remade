@@ -10,7 +10,7 @@ const Profile = () => {
 
     // mangler
     // teste med rigtige billeder
-      // object-fit: cover;
+    // object-fit: cover;
     // størrelse på billeder
 
     const gallery = css`
