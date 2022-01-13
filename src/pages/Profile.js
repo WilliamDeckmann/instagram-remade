@@ -15,6 +15,12 @@ const Profile = () => {
 
     const gallery = css`
 
+        hr {
+            height: 1px;
+            background: black;
+            width: 98%;
+        }
+
         .categorylist {
             display: flex;
             grid-template-columns: 1fr 1fr;
@@ -31,49 +37,35 @@ const Profile = () => {
             gap: 10px;
         }
 
-        .category__item {
-            background: yellow;
-        }
-
-
-
-        hr {
-            height: 1px;
-            background: black;
-            width: 98%;
-        }
-
-
     `;
 
     return (
         <div css={gallery}>
             <hr />
             <div className="categorylist">
-                <div className="categorylist__item"><img src={gridcategory} className="App-logo" /> POSTS</div>
-                <div className="categorylist__item"><img src={profilebubble} className="App-logo" /> TAGGED</div>
+                <div><img src={gridcategory} /> POSTS</div>
+                <div><img src={profilebubble} /> TAGGED</div>
             </div>
             <div className="category">
-                <div className="category__item"><img src={WuGF06} /></div>
-                <div className="category__item"><img src={WuGF06} /></div>
-                <div className="category__item"><img src={WuGF06} /></div>
-                <div className="category__item"><img src={WuGF06} /></div>
-                <div className="category__item"><img src={WuGF06} /></div>
-                <div className="category__item"><img src={WuGF06} /></div>
-                <div className="category__item"><img src={WuGF06} /></div>
-                <div className="category__item"><img src={WuGF06} /></div>
-                <div className="category__item"><img src={WuGF06} /></div>
-                <div className="category__item"><img src={WuGF06} /></div>
-                <div className="category__item"><img src={WuGF06} /></div>
-                <div className="category__item"><img src={WuGF06} /></div>
-                <div className="category__item"><img src={WuGF06} /></div>
-                <div className="category__item"><img src={WuGF06} /></div>
-                <div className="category__item"><img src={WuGF06} /></div>
-                <div className="category__item"><img src={WuGF06} /></div>
-                <div className="category__item"><img src={WuGF06} /></div>
-                <div className="category__item"><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
+                <div><img src={WuGF06} /></div>
             </div>
-
 
             <React.StrictMode>
                 <Footer />
