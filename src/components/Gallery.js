@@ -33,7 +33,7 @@ const Gallery = () => {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
           justify-items: center;
-          gap: 10px;
+          gap: 28px;
       }
 
       .categorylist__item1, .categorylist__item2, .categorylist__item3 {
@@ -42,8 +42,8 @@ const Gallery = () => {
       }
 
       .category__item__imgresize {
-        width: 300px;
-        height: 300px;
+        width: 293px;
+        height: 293px;
         object-fit: cover;
       }
   `;

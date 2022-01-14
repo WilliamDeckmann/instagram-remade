@@ -1,5 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
+
+// Components
 import CommentInput from "../components/CommentInput";
 import PostDetails from "../components/PostDetails";
 import PostImage from "../components/PostImage";
@@ -9,9 +11,12 @@ import UserSection from "../components/UserSection";
 import Image from "../assets/image-test.jpg";
 
 const Card = (props) => {
+
+    // (Only for testing)
     const {id} = props;
     console.log(props);
 
+    // Style
     const styles = css`
         max-width: 614px;
         width: 100%;
@@ -22,6 +27,11 @@ const Card = (props) => {
         .Card__link {
             text-decoration: none;
             color: black;
+        };
+
+        /* Imports */
+        .PostImage {
+            width: 100%;
         };
     `;
 

@@ -3,6 +3,7 @@ import { css, useTheme } from "@emotion/react";
 
 const UserName = (props) => {
 
+    // Style
     const styles = css`
         font-size: 28px;
         font-weight: 300;

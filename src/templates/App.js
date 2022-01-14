@@ -2,7 +2,11 @@
 import { css, useTheme } from "@emotion/react";
 import { Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "@emotion/react";
+
+// Templates
 import NavbarMain from '../templates/NavbarMain';
+
+// Pages
 import Home from "../pages/Home";
 import Profile from "../pages/Profile";
 
@@ -13,6 +17,7 @@ function App() {
     backgroundColor: "lightblue",
   };
 
+  // Style (resets)
   const styles = css`
     padding: 0;
     margin: 0;
