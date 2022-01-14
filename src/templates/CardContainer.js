@@ -1,7 +1,12 @@
+// Hooks
 import useFetch from "../hooks/useFetch";
+
+// Components
 import CardList from "./CardList";
 
 const CardContainer = () => {
+
+    // Style
     const {
         data,
         isPending,

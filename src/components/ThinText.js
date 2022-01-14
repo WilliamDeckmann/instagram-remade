@@ -3,6 +3,7 @@ import { css, useTheme } from "@emotion/react";
 
 const ThinText = (props) => {
 
+    // Style
     const styles = css`
         font-size: 14px;
         font-weight: normal;

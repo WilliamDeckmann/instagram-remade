@@ -1,5 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
+
+// Components
 import BoldText from "../components/BoldText";
 import ThinText from "../components/ThinText";
 import UserIcon from "../components/UserIcon";
@@ -13,7 +15,8 @@ import Gear from "../assets/settings.svg"
 
 const UserInfo = () => {
 
-    const Styles = css`
+    // Style
+    const styles = css`
         margin-bottom: 44px;
         display:flex;
         gap: 30px;
@@ -116,7 +119,7 @@ const UserInfo = () => {
     `;
 
     return (
-        <div className="User-info" css={Styles}>
+        <div className="User-info" css={styles}>
             <figure className="User-info__figure">
                 <UserIcon img="" alt="user-icon" />
             </figure>

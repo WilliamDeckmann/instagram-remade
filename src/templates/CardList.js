@@ -1,9 +1,12 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
+
+// Components
 import Card from "./Card";
 
 const CardList = (props) => {
 
+    // Style
     const styles = css`
         display: flex;
         flex-direction: column;

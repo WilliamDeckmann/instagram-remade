@@ -1,19 +1,36 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
+import { useState } from "react";
+
+// Components
 import BoldText from "./BoldText";
-import SocialIcon from "./SocialIcon";
 import ThinText from "./ThinText";
 import ReadMore from "./ReadMore";
 import DetailsText from "./DetailsText";
+import ShareButton from "./ShareButton";
+import LikeButton from "./LikeButton";
+import ChatButton from "./ChatButton";
+import BookmarkButton from "./BookmarkButton";
 
 // Assets
 import Heart from "../assets/heart.svg";
-import ChatBubble from "../assets/chatbubble.svg";
+import HeartHover from "../assets/heartgrey.svg";
+import ChatBubble from "../assets/chatbubbleblack.svg";
+import ChatBubbleHover from "../assets/chatbubble.svg";
 import PaperPlane from "../assets/paperplane.svg";
-import SettingsBookmark from "../assets/settingsbookmark.svg";
+import PaperPlaneHover from "../assets/paperplanegrey.svg";
+import Bookmark from "../assets/settingsbookmark.svg";
+import BookmarkHover from "../assets/settingsbookmarkgrey.svg";
 
 const PostDetails = () => {
 
+    // Icon states
+    const [ likeButton, setLikeButton ] = useState(Heart);
+    const [ chatButton, setChatButton ] = useState(ChatBubble);
+    const [ shareButton, setShareButton ] = useState(PaperPlane);
+    const [ bookmarkButton, setBookmarkButton ] = useState(Bookmark);
+
+    // Style
     const styles = css`
         border-top: 1px solid lightgrey;
 
@@ -42,43 +59,33 @@ const PostDetails = () => {
             display: flex;
             gap: 4px;
         };
-
-
-        /* Imports */
-        .heart {
-            padding: 8px;
-        };
-
-        .comments {
-            padding: 8px;
-        };
-
-        .share {
-            padding: 8px;
-        };
-
-        .bookmark {
-            padding: 8px;
-        };
     `;
 
     return (
         <div className="Post-details" css={styles}>
             <header className="Post-details__header">
                 <section className="Post-details__left-section">
-                    <div className="heart">
-                        <SocialIcon img={Heart} alt="heart" />
+                    <div className="Post-details__icon"
+                    onMouseEnter={() => setLikeButton(HeartHover)}
+                    onMouseLeave={() => setLikeButton(Heart)}>
+                        <LikeButton img={likeButton} />
                     </div>
-                    <div className="comments">
-                        <SocialIcon img={ChatBubble} alt="comments" /> 
+                    <div className="Post-details__icon"
+                    onMouseEnter={() => setChatButton(ChatBubbleHover)}
+                    onMouseLeave={() => setChatButton(ChatBubble)}>
+                        <ChatButton img={chatButton} />
                     </div>
-                    <div className="share">
-                        <SocialIcon img={PaperPlane} alt="share" />
+                    <div className="Post-details__icon"
+                    onMouseEnter={() => setShareButton(PaperPlaneHover)}
+                    onMouseLeave={() => setShareButton(PaperPlane)}>
+                        <ShareButton img={shareButton} />
                     </div>
                 </section>
                 <section className="Post-details__right-section">
-                    <div className="bookmark">
-                        <SocialIcon img={SettingsBookmark} alt="bookmark" />
+                    <div className="Post-details__icon"
+                    onMouseEnter={() => setBookmarkButton(BookmarkHover)}
+                    onMouseLeave={() => setBookmarkButton(Bookmark)}>
+                        <BookmarkButton img={bookmarkButton} />
                     </div>
                 </section>
             </header>

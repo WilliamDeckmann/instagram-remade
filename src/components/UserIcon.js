@@ -3,6 +3,7 @@ import { css, useTheme } from "@emotion/react";
 
 const UserIcon = (props) => {
     
+    // Style
     const styles = css`
         object-fit: cover;
         object-position: center;
