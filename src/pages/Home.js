@@ -2,6 +2,7 @@
 import { css, useTheme } from "@emotion/react";
 import Slider from "../components/Slider";
 import CardContainer from "../templates/CardContainer";
+import Suggestions from '../templates/Suggestions';
 
 const Home = () => {
 
@@ -31,7 +32,7 @@ const Home = () => {
             <main className="Home__main">
                 <CardContainer />
                 <div className="Test-container">
-                    "recommendations"
+                    <Suggestions />
                 </div>
                 <Slider />
             </main>
