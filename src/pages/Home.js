@@ -1,13 +1,14 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
+import Slider from "../components/Slider";
 import CardContainer from "../templates/CardContainer";
+import Suggestions from '../templates/Suggestions';
 
 const Home = () => {
 
     const Styles = css`
         display: flex;
         justify-content: center;
-
         .Home__main {
             max-width: 935px;
             width: 100%;
@@ -16,7 +17,6 @@ const Home = () => {
             grid-template-columns: auto 293px;
             gap: 28px;
         };
-
         .Test-container {
             width: 100%;
             height: 500px;
@@ -30,8 +30,9 @@ const Home = () => {
             <main className="Home__main">
                 <CardContainer />
                 <div className="Test-container">
-                    "recommendations"
+                    <Suggestions />
                 </div>
+                <Slider />
             </main>
         </div>
     );
