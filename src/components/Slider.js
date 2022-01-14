@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
 import arrow from './../assets/arrow.svg';
+import Image from "../assets/image-test.jpg";
 const Slider = () => {
 
   const slider = css`
@@ -9,7 +10,8 @@ const Slider = () => {
       background: #ffffff;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+      grid-template-rows: 20px 1fr;
+      padding: 20px;
 
       .arrowleft,.arrowright {
           width: 30px;
@@ -32,36 +34,55 @@ const Slider = () => {
       .followbutton {
           background: #0095f6;
           color: #ffffff;
+          border: 0;
+          padding-left: 30px;
+          padding-right: 30px;
+          padding-top: 5px;
+          padding-bottom: 5px;
       }
 
       .slider__item1 {
           grid-column: 1;
+          place-self: center;
       }
       .slider__item2 {
           grid-column: 3;
+          color: #0095f6;
+          place-self: center;
       }
       .slider__item3 {
           grid-column: 1;
           grid-row: 2;
-          place-self: start;
+          place-self: center;
       }
 
       .slider__item4 {
           grid-column: 3;
           grid-row: 2;
-          place-self: end;
+          place-self: center;
       }
 
       .slider__item5 {
           grid-column: 1/span 3;
           grid-row: 2;
+          display: flex;
+          gap: 15px;
+          padding: 20px;
+          /* overflow: hidden; */
       }
 
       .sliderprofile {
-          border: 1px solid grey;
+          outline: 1px solid grey;
           border-radius: 5px;
+          padding: 20px;
+          display: grid;
+          place-items: center;
+      }
+
+      .sliderimage {
           width: 50px;
           height: 50px;
+          border-radius: 50%;
       }
   `;
 
@@ -72,36 +93,66 @@ const Slider = () => {
           <div className="buttonbackground slider__item3"><img src={arrow} className="arrowleft" /></div>
           <div className="buttonbackground slider__item4"><img src={arrow} className="arrowright" /></div>
           <div className="slider__item5">
-            <div className="sliderprofile">
-              <button className="followbutton">Follow</button>
-            </div>
-            <div className="sliderprofile">
-              <button className="followbutton">Follow</button>
-            </div>
-            <div className="sliderprofile">
-              <button className="followbutton">Follow</button>
-            </div>
-            <div className="sliderprofile">
-              <button className="followbutton">Follow</button>
-            </div>
-            <div className="sliderprofile">
-              <button className="followbutton">Follow</button>
-            </div>
-            <div className="sliderprofile">
-              <button className="followbutton">Follow</button>
-            </div>
-            <div className="sliderprofile">
-              <button className="followbutton">Follow</button>
-            </div>
-            <div className="sliderprofile">
-              <button className="followbutton">Follow</button>
-            </div>
-            <div className="sliderprofile">
-              <button className="followbutton">Follow</button>
-            </div>
-            <div className="sliderprofile">
-              <button className="followbutton">Follow</button>
-            </div>
+              <div className="sliderprofile">
+                  <img src={Image} className="sliderimage" />
+                  <div>username</div>
+                  <div>Popular</div>
+                  <button className="followbutton">Follow</button>
+              </div>
+              <div className="sliderprofile">
+                  <img src={Image} className="sliderimage" />
+                  <div>username</div>
+                  <div>Popular</div>
+                  <button className="followbutton">Follow</button>
+              </div>
+              <div className="sliderprofile">
+                  <img src={Image} className="sliderimage" />
+                  <div>username</div>
+                  <div>Popular</div>
+                  <button className="followbutton">Follow</button>
+              </div>
+              <div className="sliderprofile">
+                  <img src={Image} className="sliderimage" />
+                  <div>username</div>
+                  <div>Popular</div>
+                  <button className="followbutton">Follow</button>
+              </div>
+              <div className="sliderprofile">
+                  <img src={Image} className="sliderimage" />
+                  <div>username</div>
+                  <div>Popular</div>
+                  <button className="followbutton">Follow</button>
+              </div>
+              <div className="sliderprofile">
+                  <img src={Image} className="sliderimage" />
+                  <div>username</div>
+                  <div>Popular</div>
+                  <button className="followbutton">Follow</button>
+              </div>
+              <div className="sliderprofile">
+                  <img src={Image} className="sliderimage" />
+                  <div>username</div>
+                  <div>Popular</div>
+                  <button className="followbutton">Follow</button>
+              </div>
+              <div className="sliderprofile">
+                  <img src={Image} className="sliderimage" />
+                  <div>username</div>
+                  <div>Popular</div>
+                  <button className="followbutton">Follow</button>
+              </div>
+              <div className="sliderprofile">
+                  <img src={Image} className="sliderimage" />
+                  <div>username</div>
+                  <div>Popular</div>
+                  <button className="followbutton">Follow</button>
+              </div>
+              <div className="sliderprofile">
+                  <img src={Image} className="sliderimage" />
+                  <div>username</div>
+                  <div>Popular</div>
+                  <button className="followbutton">Follow</button>
+              </div>
           </div>
       </div>
   );
