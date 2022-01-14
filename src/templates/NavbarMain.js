@@ -5,11 +5,13 @@ import Navbar from "../components/Navbar";
 const NavbarMain = () => {
     
     const styles = css`
+
     *{
         margin: 0;
         box-sizing: border-box;
         scroll-behavior: smooth;
     }
+
         border-bottom: 1px solid #dbdbdb;
         padding: 11px;
         background-color: white;

@@ -10,6 +10,7 @@ const Slider = () => {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr;
+      
       .arrowleft,.arrowright {
           width: 30px;
           height: auto;
@@ -27,10 +28,12 @@ const Slider = () => {
           opacity: 0.5;
           border-radius: 50%;
       }
+
       .followbutton {
           background: #0095f6;
           color: #ffffff;
       }
+
       .slider__item1 {
           grid-column: 1;
       }
@@ -42,15 +45,18 @@ const Slider = () => {
           grid-row: 2;
           place-self: start;
       }
+
       .slider__item4 {
           grid-column: 3;
           grid-row: 2;
           place-self: end;
       }
+
       .slider__item5 {
           grid-column: 1/span 3;
           grid-row: 2;
       }
+
       .sliderprofile {
           border: 1px solid grey;
           border-radius: 5px;

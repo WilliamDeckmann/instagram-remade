@@ -3,11 +3,13 @@ import { css, useTheme } from "@emotion/react";
 
 function suggestionProfile() {
   const styles = css`
+
   // User main profile
       .suggestions__Mainprofile_content{
         display:flex;
         justify-content:center;
       }
+
       .suggestions__Mainprofile_names{
         display:flex;
         align-items:start;
@@ -36,6 +38,7 @@ function suggestionProfile() {
           }
         }
       }
+      
       .suggestions__Mainprofile_switch{
         position: relative;
         left:55px;
@@ -47,6 +50,7 @@ function suggestionProfile() {
           color:#0095f6;
          }
       }
+
       .suggestions__Mainprofile_img{
         position: relative;
         right:60px;
@@ -55,11 +59,14 @@ function suggestionProfile() {
         border-radius:50%;
         }
       }
+
       a{
        text-decoration:none; 
        color:#262626;
       }
+
 // Recommended text
+
       .suggestions__recommended_main{
         display:flex;
         justify-content:center;
@@ -74,15 +81,18 @@ function suggestionProfile() {
           left:65px;
         }
       }
+
       .suggestions__recommended_text{
         position:relative;
         right:60px;
         color:#8e8e8e;
         font-size:14px;
       }
+
 // Recommended profiles
 .container{
 } 
+
 .suggestions__profile_main{
         max-width: 20%;
 }
@@ -95,6 +105,7 @@ function suggestionProfile() {
         padding-bottom:8px;
         padding-top:8px;
       }
+
       .suggestions__profiles_namefollowed{
         display:flex;
         align-items:start;
@@ -115,6 +126,7 @@ function suggestionProfile() {
           font-weight:400;
         }
       }
+
       .suggestions__profile_follow{
         position: relative;
         left:125px;
@@ -126,6 +138,7 @@ function suggestionProfile() {
           color:#0095f6;
          }
       }
+
       .suggestions__profiles_img{
         position: relative;
         right:20px;

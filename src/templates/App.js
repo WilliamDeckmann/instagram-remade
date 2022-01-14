@@ -7,7 +7,7 @@ import Home from "../pages/Home";
 import Profile from "../pages/Profile";
 
 function App() {
-  
+
   // This is only af test theme, it will be updated later...
   const main = {
     backgroundColor: "lightblue",
@@ -71,18 +71,18 @@ function App() {
   `;
 
   return (
-    <ThemeProvider theme={main}>
-      <div className="App" css={styles}>
-        <NavbarMain />
-        <main className="Main">
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route exact path="/user" element={<Profile />} />
-            <Route path="*" element={<p>Not Found</p>} />
-          </Routes>
-        </main>
+    <ThemeProvider theme={styles}>
+      <div className="App">
+      <NavbarMain />
+      <main className="Main">
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/user" element={<Profile />} />
+          <Route path="*" element={<p>Not Found</p>} />
+        </Routes>
+      </main>
       </div>
-    </ThemeProvider>
+     </ThemeProvider>
   );
 }
 
