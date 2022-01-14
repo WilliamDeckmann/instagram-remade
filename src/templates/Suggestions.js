@@ -94,7 +94,7 @@ function suggestionProfile() {
 } 
 
 .suggestions__profile_main{
-        max-width: 50%;
+        max-width: 20%;
 }
       
 .suggestions__profiles_content{
@@ -151,7 +151,6 @@ function suggestionProfile() {
     return (
 
       <div className="container" css={styles} style={{display: "flex", justifyContent:"space-around", width:'51.5vw', marginLeft: '20%'}}>
-
         <div className="suggestions__profile_main">
           <div className="suggestions__Mainprofile_content">
             <div className="suggestions__Mainprofile_img">
