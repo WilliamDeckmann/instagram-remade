@@ -7,7 +7,7 @@ import Home from "../pages/Home";
 import Profile from "../pages/Profile";
 
 function App() {
-  
+
   // This is only af test theme, it will be updated later...
   const main = {
     backgroundColor: "lightblue",
@@ -71,7 +71,7 @@ function App() {
   `;
 
   return (
-    <ThemeProvider theme={stles}>
+    <ThemeProvider theme={styles}>
       <div className="App">
       <NavbarMain />
       <main className="Main">
