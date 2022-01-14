@@ -6,7 +6,7 @@
 - William
 - Mathias
 - Aske
-- Mads
+- (Mads)
 
 ## Aflevering
 
@@ -20,5 +20,17 @@
 - https://www.instagram.com/
 - https://www.instagram.com/rtswu06/
 
+## notater til project
 
-.
+### funktioner
+
+- fetch
+- bookmark
+- category routing (som set på profile page, react-router-dom)
+
+### andet
+
+- kun dropdown til Profile
+- ingen dropdown på search
+- ingen dropdown på suggested listen
+- basal slider til "home"
