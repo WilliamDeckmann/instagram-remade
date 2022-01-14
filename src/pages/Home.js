@@ -9,7 +9,6 @@ const Home = () => {
     const Styles = css`
         display: flex;
         justify-content: center;
-
         .Home__main {
             max-width: 935px;
             width: 100%;
@@ -18,7 +17,6 @@ const Home = () => {
             grid-template-columns: auto 293px;
             gap: 28px;
         };
-
         .Test-container {
             width: 100%;
             height: 500px;

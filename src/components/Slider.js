@@ -10,7 +10,7 @@ const Slider = () => {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-
+      
       .arrowleft,.arrowright {
           width: 30px;
           height: auto;
