@@ -5,10 +5,6 @@ import Image from "../assets/image-test.jpg";
 import spritemap from "../assets/spritemap.png";
 const Slider = () => {
 
-  // body skal have margin-bottom: 0;
-
-  // fiks arrow ikonernes stoerrelse
-
   const slider = css`
       border: 1px solid grey;
       border-radius: 5px;
