@@ -49,7 +49,6 @@ function App() {
     };
 
     img, video {
-      width: 100%;
       display: block;
     };
 
@@ -72,7 +71,7 @@ function App() {
 
   return (
     <ThemeProvider theme={styles}>
-      <div className="App">
+      <div className="App" css={styles}>
       <NavbarMain />
       <main className="Main">
         <Routes>
