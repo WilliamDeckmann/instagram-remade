@@ -2,6 +2,7 @@
 import { css, useTheme } from "@emotion/react";
 import { Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "@emotion/react";
+import NavbarMain from '../templates/NavbarMain';
 import Home from "../pages/Home";
 import Profile from "../pages/Profile";
 
@@ -72,7 +73,7 @@ function App() {
   return (
     <ThemeProvider theme={main}>
       <div className="App" css={styles}>
-        "Header"
+        <NavbarMain />
         <main className="Main">
           <Routes>
             <Route exact path="/" element={<Home />} />
