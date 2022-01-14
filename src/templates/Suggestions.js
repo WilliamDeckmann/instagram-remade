@@ -149,7 +149,8 @@ function suggestionProfile() {
 
     `;
     return (
-
+      
+      // Main profile
       <div className="container" css={styles} style={{display: "flex", justifyContent:"space-around", width:'51.5vw', marginLeft: '20%'}}>
         <div className="suggestions__profile_main">
           <div className="suggestions__Mainprofile_content">
@@ -164,12 +165,16 @@ function suggestionProfile() {
               <a href="#"><div>Switch</div></a>
             </div>
               </div> 
-
+        {/* Main profile */}
+            
+            {/* Recommended text */}
               <div className="suggestions__recommended_main">
               <div className="suggestions__recommended_text">Recommended for you</div>
               <a href="#"><div>See all</div></a>
               </div>
+            {/* Recommended text */}
 
+            {/* Profiles */}
               <div className="suggestions__profiles_content">
                 <div className="suggestions__profiles_img">
               <img src="https://via.placeholder.com/35" alt="Pfp" />
@@ -182,19 +187,7 @@ function suggestionProfile() {
               <a href="#"><div>Follow</div></a>
             </div>
               </div>  
-
-              <div className="suggestions__profiles_content">
-                <div className="suggestions__profiles_img">
-              <img src="https://via.placeholder.com/35" alt="Pfp" />
-                </div>
-                <div className="suggestions__profiles_namefollowed">
-                <span><a href="#"><div style={{maxWidth: '20%', overflowWrap:"break-word"}}>Profile_Names</div></a></span>
-                <div className="suggestions__profiles_followedBy">Followed by</div>
-                </div>
-                <div className="suggestions__profile_follow">
-              <a href="#"><div>Follow</div></a>
-            </div>
-              </div>
+          {/* Profiles */}
         </div>
 
       </div>
