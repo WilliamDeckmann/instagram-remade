@@ -2,6 +2,7 @@
 import { css, useTheme } from "@emotion/react";
 import { Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "@emotion/react";
+import NavbarMain from '../templates/NavbarMain';
 import Home from "../pages/Home";
 import Profile from "../pages/Profile";
 
@@ -70,16 +71,16 @@ function App() {
   `;
 
   return (
-    <ThemeProvider theme={main}>
-      <div className="App" css={styles}>
-        "Header"
-        <main className="Main">
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route exact path="/user" element={<Profile />} />
-            <Route path="*" element={<p>Not Found</p>} />
-          </Routes>
-        </main>
+    <ThemeProvider theme={stles}>
+      <div className="App">
+      <NavbarMain />
+      <main className="Main">
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/user" element={<Profile />} />
+          <Route path="*" element={<p>Not Found</p>} />
+        </Routes>
+      </main>
       </div>
      </ThemeProvider>
   );
