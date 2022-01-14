@@ -23,7 +23,6 @@ const Navbar = () => {
         .logo{
             margin-right: 130px;
         }
-
             .search{
             border: none;
             border-radius: 8px;
