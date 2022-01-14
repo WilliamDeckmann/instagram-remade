@@ -6,7 +6,7 @@
 - William
 - Mathias
 - Aske
-- Mads
+- (Mads)
 
 ## Aflevering
 

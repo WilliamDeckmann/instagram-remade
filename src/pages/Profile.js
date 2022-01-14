@@ -1,6 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
 import UserInfo from "../templates/UserInfo";
+import Gallery from "../components/Gallery";
+import Footer from "../components/Footer";
 
 const Profile = () => {
 
@@ -26,12 +28,11 @@ const Profile = () => {
     <div className="Profile" css={Styles}>
       <main className="Profile__main">
         <UserInfo />
-        <div className="Test-container">
-          "gallery"
-        </div>
+        <Gallery />
+        <Footer />
       </main>
-  </div>
-    );
+    </div>
+  );
 }
 
 export default Profile;
