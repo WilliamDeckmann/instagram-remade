@@ -9,6 +9,10 @@ const CommentButton = () => {
     // Style
     const styles = css`
         opacity: .3;
+
+        .Comment-button__button {
+            cursor: auto !important;
+        };
     `;
 
     // Style (active)

@@ -15,12 +15,14 @@ import BookmarkButton from "./BookmarkButton";
 // Assets
 import Heart from "../assets/heart.svg";
 import HeartHover from "../assets/heartgrey.svg";
+import HeartActive from "../assets/heartactivepink.svg";
 import ChatBubble from "../assets/chatbubbleblack.svg";
 import ChatBubbleHover from "../assets/chatbubble.svg";
 import PaperPlane from "../assets/paperplane.svg";
 import PaperPlaneHover from "../assets/paperplanegrey.svg";
 import Bookmark from "../assets/settingsbookmark.svg";
 import BookmarkHover from "../assets/settingsbookmarkgrey.svg";
+import BookmarkActive from "../assets/bookmarkfilled.svg";
 
 const PostDetails = () => {
 
@@ -29,6 +31,20 @@ const PostDetails = () => {
     const [ chatButton, setChatButton ] = useState(ChatBubble);
     const [ shareButton, setShareButton ] = useState(PaperPlane);
     const [ bookmarkButton, setBookmarkButton ] = useState(Bookmark);
+
+    // Like state
+    const [ likeState, setLikeState ] = useState(false);
+    const [ likeCount, setLikeCount ] = useState(false);
+    const UpdateLikeState = () => {
+        setLikeState(!likeState);
+        setLikeCount(!likeCount);
+    };
+
+    // Bookmark state
+    const [ bookmarkState, setBookmarkState ] = useState(false);
+    const UpdateBookmarkState = () => {
+        setBookmarkState(!bookmarkState);
+    };
 
     // Style
     const styles = css`
@@ -59,6 +75,10 @@ const PostDetails = () => {
             display: flex;
             gap: 4px;
         };
+
+        .Post-details__date {
+            margin-top: 5px;
+        }
     `;
 
     return (
@@ -67,8 +87,9 @@ const PostDetails = () => {
                 <section className="Post-details__left-section">
                     <div className="Post-details__icon"
                     onMouseEnter={() => setLikeButton(HeartHover)}
-                    onMouseLeave={() => setLikeButton(Heart)}>
-                        <LikeButton img={likeButton} />
+                    onMouseLeave={() => setLikeButton(Heart)}
+                    onClick={UpdateLikeState}>
+                        <LikeButton img={likeState ? HeartActive : likeButton} />
                     </div>
                     <div className="Post-details__icon"
                     onMouseEnter={() => setChatButton(ChatBubbleHover)}
@@ -84,14 +105,15 @@ const PostDetails = () => {
                 <section className="Post-details__right-section">
                     <div className="Post-details__icon"
                     onMouseEnter={() => setBookmarkButton(BookmarkHover)}
-                    onMouseLeave={() => setBookmarkButton(Bookmark)}>
-                        <BookmarkButton img={bookmarkButton} />
+                    onMouseLeave={() => setBookmarkButton(Bookmark)}
+                    onClick={UpdateBookmarkState}>
+                        <BookmarkButton img={bookmarkState ? BookmarkActive : bookmarkButton} />
                     </div>
                 </section>
             </header>
             <article className="Post-details__article">
                 <p className="Post-details__like-count">
-                    <BoldText text="0" /> <BoldText text="Synes godt om" />
+                    <BoldText text={likeCount ? 1 : 0} /> <BoldText text="Synes godt om" />
                 </p>
                 <p className="Post-details__paragraph">
                     <BoldText text="user-name" />
