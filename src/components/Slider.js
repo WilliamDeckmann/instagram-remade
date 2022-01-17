@@ -63,6 +63,8 @@ const Slider = () => {
           display: grid;
           grid-template-columns: 1fr;
           grid-template-rows: 1fr;
+          align-self: center;
+          justify-self: start;
       }
 
       .imageconstraint {
@@ -78,6 +80,8 @@ const Slider = () => {
           display: grid;
           grid-template-columns: 1fr;
           grid-template-rows: 1fr;
+          align-self: center;
+          justify-self: end;
       }
 
       .slider__item5 {
@@ -87,6 +91,7 @@ const Slider = () => {
           gap: 15px;
           padding: 20px;
           /* overflow: hidden; */
+          place-self: center;
       }
 
       .sliderprofile {
@@ -146,42 +151,6 @@ const Slider = () => {
               </div>
           </div>
           <div className="slider__item5">
-              <div className="sliderprofile">
-                  <img src={Image} className="sliderimage" />
-                  <div className="sliderprofile__identity">
-                      <div className="username">username</div>
-                      <span className="verified">verified</span>
-                  </div>
-                  <div className="sliderprofile__popular">Popular</div>
-                  <button className="followbutton">Follow</button>
-              </div>
-              <div className="sliderprofile">
-                  <img src={Image} className="sliderimage" />
-                  <div className="sliderprofile__identity">
-                      <div className="username">username</div>
-                      <span className="verified">verified</span>
-                  </div>
-                  <div className="sliderprofile__popular">Popular</div>
-                  <button className="followbutton">Follow</button>
-              </div>
-              <div className="sliderprofile">
-                  <img src={Image} className="sliderimage" />
-                  <div className="sliderprofile__identity">
-                      <div className="username">username</div>
-                      <span className="verified">verified</span>
-                  </div>
-                  <div className="sliderprofile__popular">Popular</div>
-                  <button className="followbutton">Follow</button>
-              </div>
-              <div className="sliderprofile">
-                  <img src={Image} className="sliderimage" />
-                  <div className="sliderprofile__identity">
-                      <div className="username">username</div>
-                      <span className="verified">verified</span>
-                  </div>
-                  <div className="sliderprofile__popular">Popular</div>
-                  <button className="followbutton">Follow</button>
-              </div>
               <div className="sliderprofile">
                   <img src={Image} className="sliderimage" />
                   <div className="sliderprofile__identity">
