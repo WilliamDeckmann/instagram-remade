@@ -18,12 +18,12 @@ const Home = () => {
             gap: 28px;
         };
 
-        .Test-container {
-            width: 100%;
-            height: 500px;
-            border: 1px solid red;
-            text-align: center;
-        };
+        // .Test-container {
+        //     width: 100%;
+        //     height: 500px;
+        //     border: 1px solid red;
+        //     text-align: center;
+        // };
     `;
 
     return (
