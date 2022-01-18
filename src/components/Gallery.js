@@ -58,7 +58,7 @@ const Gallery = () => {
               </div>
               <div className="categorylist__item2">
                   <img src={bookmark} />
-                  <span>Saved</span>
+                  <span>SAVED</span>
               </div>
               <div className="categorylist__item3">
                   <img src={profilebubble} />
