@@ -25,7 +25,6 @@ function Footer() {
                     text-decoration: none;
                 }
             }
-
         }
 
         .footer__item2 {
