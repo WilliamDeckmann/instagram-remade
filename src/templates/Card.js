@@ -30,7 +30,7 @@ const Card = (props) => {
         };
 
         /* Imports */
-        .PostImage {
+        .Post-image {
             width: 100%;
         };
     `;

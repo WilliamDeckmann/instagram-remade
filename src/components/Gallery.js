@@ -2,17 +2,16 @@
 import { css, useTheme } from "@emotion/react";
 import gridcategory from './../assets/gridcategory.svg';
 import profilebubble from './../assets/profilebubble.svg';
-import WuGF06 from './../assets/WuGF06.jpg';
 import bookmark from './../assets/settingsbookmark.svg';
-import instagramlogo from './../assets/instagramlogo.png';
+
+import GalleryContainer from "../templates/GalleryContainer";
 const Gallery = () => {
 
   const gallery = css`
-      hr {
+      .Gallery__line {
           height: 1px;
           background: black;
-          width: 98%;
-      }
+      };
 
       .categorylist {
           display: flex;
@@ -27,30 +26,17 @@ const Gallery = () => {
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
           line-height: 16px;
           font-weight: 600;
-      }
-
-      .category {
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          justify-items: center;
-          gap: 28px;
-      }
+      };
 
       .categorylist__item1, .categorylist__item2, .categorylist__item3 {
           display: flex;
           align-items: center;
-      }
-
-      .category__item__imgresize {
-        width: 293px;
-        height: 293px;
-        object-fit: cover;
-      }
+      };
   `;
 
   return (
-      <div css={gallery}>
-          <hr />
+      <div className="Gallery" css={gallery}>
+          <hr className="Gallery__line" />
           <div className="categorylist">
               <div className="categorylist__item1">
                   <img src={gridcategory} />
@@ -65,26 +51,7 @@ const Gallery = () => {
                   <span>TAGGED</span>
               </div>
           </div>
-          <div className="category">
-              <div><img src={instagramlogo} className="category__item__imgresize" /></div>
-              <div><img src={WuGF06} className="category__item__imgresize" /></div>
-              <div><img src={WuGF06} className="category__item__imgresize" /></div>
-              <div><img src={WuGF06} className="category__item__imgresize" /></div>
-              <div><img src={WuGF06} className="category__item__imgresize" /></div>
-              <div><img src={WuGF06} className="category__item__imgresize" /></div>
-              <div><img src={WuGF06} className="category__item__imgresize" /></div>
-              <div><img src={WuGF06} className="category__item__imgresize" /></div>
-              <div><img src={WuGF06} className="category__item__imgresize" /></div>
-              <div><img src={WuGF06} className="category__item__imgresize" /></div>
-              <div><img src={WuGF06} className="category__item__imgresize" /></div>
-              <div><img src={WuGF06} className="category__item__imgresize" /></div>
-              <div><img src={WuGF06} className="category__item__imgresize" /></div>
-              <div><img src={WuGF06} className="category__item__imgresize" /></div>
-              <div><img src={WuGF06} className="category__item__imgresize" /></div>
-              <div><img src={WuGF06} className="category__item__imgresize" /></div>
-              <div><img src={WuGF06} className="category__item__imgresize" /></div>
-              <div><img src={WuGF06} className="category__item__imgresize" /></div>
-          </div>
+          <GalleryContainer />
       </div>
   );
 }
