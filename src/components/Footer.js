@@ -11,7 +11,7 @@ function Footer() {
 
         .footer__item1 {
             display: flex;
-            flex-direction: row;
+            flex-wrap: wrap;
             justify-content: center;
             gap: 15px;
             color: #8e8e8e;
