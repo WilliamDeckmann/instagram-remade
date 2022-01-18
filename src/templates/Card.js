@@ -44,7 +44,7 @@ const Card = (props) => {
                 <PostImage img={Image} alt="image" />
             </main>
             <footer className="Card__footer">
-                <PostDetails />
+                <PostDetails {...props} />
                 <CommentInput />
             </footer>
         </div>
