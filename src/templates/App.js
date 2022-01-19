@@ -10,10 +10,10 @@ import NavbarMain from '../templates/NavbarMain';
 import Home from "../pages/Home";
 import Profile from "../pages/Profile";
 
-import Saved from "../routes/saved";
-import Tagged from "../routes/tagged";
-import Posts from "../routes/posts";
-import Invoice from "../routes/invoice";
+import Saved from "../components/saved";
+import Tagged from "../components/tagged";
+import Posts from "../components/posts";
+import Invoice from "../components/invoice";
 
 function App() {
 
@@ -102,6 +102,19 @@ function App() {
           </Route>
           <Route path="*" element={<p>Not Found</p>} />
         </Routes>
+
+        {/* <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/user" element={<Profile />}>
+            <Route exact path="/user/saved" element={<Profile />} />
+            <Route exact path="/user/tagged" element={<Profile />} />
+          </Route>
+          <Route path="*" element={<p>Not Found</p>} />
+        </Routes> */}
+
+
+
+
       </main>
       </div>
      </ThemeProvider>
