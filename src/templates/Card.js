@@ -29,6 +29,7 @@ const Card = (props) => {
             color: black;
         };
 
+
         /* Imports */
         .Post-image {
             width: 100%;
