@@ -3,12 +3,15 @@ import { css, useTheme } from "@emotion/react";
 import { Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "@emotion/react";
 
-// Templates
-import NavbarMain from '../templates/NavbarMain';
-
 // Pages
 import Home from "../pages/Home";
 import Profile from "../pages/Profile";
+
+// Templates
+import NavbarMain from '../templates/NavbarMain';
+
+// Components
+import ThinText from "../components/ThinText";
 
 function App() {
 
@@ -70,21 +73,27 @@ function App() {
     ul {
       padding: 0;
       margin: 0;
+    };
+
+    li {
       list-style-type: none;
     };
   `;
 
   return (
-    <ThemeProvider theme={styles}>
+    <ThemeProvider theme={main}>
       <div className="App" css={styles}>
-      <NavbarMain />
-      <main className="Main">
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/user" element={<Profile />} />
-          <Route path="*" element={<p>Not Found</p>} />
-        </Routes>
-      </main>
+        <NavbarMain />
+        <main className="Main">
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/user" element={<Profile />}>
+              <Route exact path="/user/saved" element={<Profile />} />
+              <Route exact path="/user/tagged" element={<Profile />} />
+            </Route>
+            <Route path="*" element={<ThinText text="Nothing found..." />} />
+          </Routes>
+        </main>
       </div>
      </ThemeProvider>
   );

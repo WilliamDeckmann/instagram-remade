@@ -3,8 +3,8 @@ import { css, useTheme } from "@emotion/react";
 import gridcategory from './../assets/gridcategory.svg';
 import profilebubble from './../assets/profilebubble.svg';
 import bookmark from './../assets/settingsbookmark.svg';
-
 import GalleryContainer from "../templates/GalleryContainer";
+
 const Gallery = () => {
 
   const gallery = css`

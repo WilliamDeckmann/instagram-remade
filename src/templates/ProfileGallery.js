@@ -1,12 +1,15 @@
 // Hooks
 import useFetch from "../hooks/useFetch";
 
-// Components
+// Templates
 import GalleryList from "./GalleryList";
 
-const GalleryContainer = () => {
+// Components
+import ThinText from "../components/ThinText";
 
-    // Style
+const ProfileGallery = () => {
+
+    // API data
     const {
         data,
         isPending,
@@ -15,11 +18,11 @@ const GalleryContainer = () => {
     
     return (
         <div className="Gallery-container">
-            {error && <div>{error}</div>}
-            {isPending && <div>Loading...</div>}
+            {error && <ThinText text={error} />}
+            {isPending && <ThinText text="Loading" />}
             {data && <GalleryList data={data} />}
         </div>
     );
 }
  
-export default GalleryContainer;
+export default ProfileGallery;

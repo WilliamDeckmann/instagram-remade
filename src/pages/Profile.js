@@ -1,12 +1,21 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
+import { Route, Routes } from "react-router-dom";
+
+// Templates
 import UserInfo from "../templates/UserInfo";
-import Gallery from "../components/Gallery";
+import ProfileMenu from "../templates/ProfileMenu";
+import ProfileGallery from "../templates/ProfileGallery";
+import BookmarkGallery from "../templates/BookmarkGallery";
+
+// Components
+import ThinText from "../components/ThinText";
 import Footer from "../components/Footer";
 
 const Profile = () => {
 
-  const Styles = css`
+  // Styles
+  const styles = css`
     display: flex;
     justify-content: center;
 
@@ -25,10 +34,16 @@ const Profile = () => {
   `;
 
   return (
-    <div className="Profile" css={Styles}>
+    <div className="Profile" css={styles}>
       <main className="Profile__main">
         <UserInfo />
-        <Gallery />
+        <ProfileMenu />
+        <Routes>
+          <Route exact path="/" element={<ProfileGallery />} />
+          <Route exact path="/saved" element={<BookmarkGallery />} />
+          <Route exact path="/tagged" element={<ThinText text="..." />} />
+          <Route path="*" element={<ThinText text="Nothing found..." />} />
+        </Routes>
         <Footer />
       </main>
     </div>
