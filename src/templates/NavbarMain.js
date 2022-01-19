@@ -3,7 +3,7 @@ import { css, useTheme } from "@emotion/react";
 import Navbar from "../components/Navbar";
 
 const NavbarMain = () => {
-    
+
     const styles = css`
 
     *{
@@ -16,12 +16,12 @@ const NavbarMain = () => {
         padding: 11px;
         background-color: white;
         width: 100%;
-        position: fixed;
+        position: sticky;
         top: 0;
         overflow: hidden;
         z-index: 9999;
-        
-        
+
+
         img{
             object-fit: contain;
         }

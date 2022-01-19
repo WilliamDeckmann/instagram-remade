@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
 import Slider from "../components/Slider";
+import Footer from "../components/Footer";
 import CardContainer from "../templates/CardContainer";
 import Suggestions from '../templates/Suggestions';
 
@@ -24,7 +25,10 @@ const Home = () => {
         <div className="Home" css={Styles}>
             <main className="Home__main">
                 <CardContainer />
-                <Suggestions />
+                <aside className="Home__aside">
+                    <Suggestions />
+                    <Footer />
+                </aside>
                 <Slider />
             </main>
         </div>

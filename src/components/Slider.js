@@ -1,6 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
-import arrow from './../assets/arrow.svg';
+import arrowwhite from './../assets/arrowwhite.svg';
+import Image from "../assets/image-test.jpg";
+import spritemap from "../assets/spritemap.png";
 const Slider = () => {
 
   const slider = css`
@@ -9,10 +11,11 @@ const Slider = () => {
       background: #ffffff;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      
+      grid-template-rows: 20px 1fr;
+      padding: 20px;
+
       .arrowleft,.arrowright {
-          width: 30px;
+          width: 20px;
           height: auto;
       }
       .arrowleft {
@@ -25,43 +28,111 @@ const Slider = () => {
           width: 30px;
           height: 30px;
           background: #7f7f7f;
-          opacity: 0.5;
+          opacity: 0.7;
           border-radius: 50%;
       }
 
       .followbutton {
           background: #0095f6;
           color: #ffffff;
+          border: 0;
+          padding-left: 30px;
+          padding-right: 30px;
+          padding-top: 5px;
+          padding-bottom: 5px;
+
+          font-size: 14px;
+          font-weight: 600;
       }
 
       .slider__item1 {
           grid-column: 1;
+          place-self: center;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
       }
       .slider__item2 {
           grid-column: 3;
+          color: #0095f6;
+          place-self: center;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
       }
       .slider__item3 {
           grid-column: 1;
           grid-row: 2;
-          place-self: start;
+          place-self: center;
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr;
+          align-self: center;
+          justify-self: start;
+      }
+
+      .imageconstraint {
+          grid-column: 1;
+          grid-row: 1;
+          place-self: center;
       }
 
       .slider__item4 {
           grid-column: 3;
           grid-row: 2;
-          place-self: end;
+          place-self: center;
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr;
+          align-self: center;
+          justify-self: end;
       }
 
       .slider__item5 {
           grid-column: 1/span 3;
           grid-row: 2;
+          display: flex;
+          gap: 15px;
+          padding: 20px;
+          /* overflow: hidden; */
+          place-self: center;
       }
 
       .sliderprofile {
-          border: 1px solid grey;
+          outline: 1px solid grey;
           border-radius: 5px;
+          padding: 20px;
+          display: grid;
+          place-items: center;
+      }
+
+      .sliderprofile__popular {
+        font-size: 12px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+      }
+
+      .sliderimage {
           width: 50px;
           height: 50px;
+          border-radius: 50%;
+      }
+
+      /* css hack for background-image */
+      .verified {
+          background-image: url('${spritemap}');
+          background-position: 0 -369px;
+          background-repeat: no-repeat;
+          width: 18px;
+          height: 18px;
+          display:block;
+          overflow: hidden;
+          text-indent: 110%;
+      }
+
+      .sliderprofile__identity {
+          display: flex;
+      }
+
+      .username {
+          font-size: 14px;
+          font-weight: 600;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
       }
   `;
 
@@ -69,39 +140,44 @@ const Slider = () => {
       <div css={slider}>
           <div className="slider__item1">Suggestions For You</div>
           <div className="slider__item2">See All</div>
-          <div className="buttonbackground slider__item3"><img src={arrow} className="arrowleft" /></div>
-          <div className="buttonbackground slider__item4"><img src={arrow} className="arrowright" /></div>
+          <div className="buttonbackground slider__item3">
+              <div className="imageconstraint">
+                  <img src={arrowwhite} className="arrowleft" />
+              </div>
+          </div>
+          <div className="buttonbackground slider__item4">
+              <div className="imageconstraint">
+                  <img src={arrowwhite} className="arrowright" />
+              </div>
+          </div>
           <div className="slider__item5">
-            <div className="sliderprofile">
-              <button className="followbutton">Follow</button>
-            </div>
-            <div className="sliderprofile">
-              <button className="followbutton">Follow</button>
-            </div>
-            <div className="sliderprofile">
-              <button className="followbutton">Follow</button>
-            </div>
-            <div className="sliderprofile">
-              <button className="followbutton">Follow</button>
-            </div>
-            <div className="sliderprofile">
-              <button className="followbutton">Follow</button>
-            </div>
-            <div className="sliderprofile">
-              <button className="followbutton">Follow</button>
-            </div>
-            <div className="sliderprofile">
-              <button className="followbutton">Follow</button>
-            </div>
-            <div className="sliderprofile">
-              <button className="followbutton">Follow</button>
-            </div>
-            <div className="sliderprofile">
-              <button className="followbutton">Follow</button>
-            </div>
-            <div className="sliderprofile">
-              <button className="followbutton">Follow</button>
-            </div>
+              <div className="sliderprofile">
+                  <img src={Image} className="sliderimage" />
+                  <div className="sliderprofile__identity">
+                      <div className="username">username</div>
+                      <span className="verified">verified</span>
+                  </div>
+                  <div className="sliderprofile__popular">Popular</div>
+                  <button className="followbutton">Follow</button>
+              </div>
+              <div className="sliderprofile">
+                  <img src={Image} className="sliderimage" />
+                  <div className="sliderprofile__identity">
+                      <div className="username">username</div>
+                      <span className="verified">verified</span>
+                  </div>
+                  <div className="sliderprofile__popular">Popular</div>
+                  <button className="followbutton">Follow</button>
+              </div>
+              <div className="sliderprofile">
+                  <img src={Image} className="sliderimage" />
+                  <div className="sliderprofile__identity">
+                      <div className="username">username</div>
+                      <span className="verified">verified</span>
+                  </div>
+                  <div className="sliderprofile__popular">Popular</div>
+                  <button className="followbutton">Follow</button>
+              </div>
           </div>
       </div>
   );

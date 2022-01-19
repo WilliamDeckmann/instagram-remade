@@ -25,6 +25,10 @@ function suggestionProfile() {
         .suggestions__Mainprofile_fullname{
           color:#8e8e8e;
           font-weight:400;
+          overflow-wrap:break-word;
+          overflow:hidden;
+          text-overflow:ellipsis;
+          max-width:100px;
         }
         span{
           max-width: 100%;
@@ -94,7 +98,10 @@ function suggestionProfile() {
 } 
 
 .suggestions__profile_main{
-        max-width: 20%;
+        max-width: 100%;
+        margin-top:40px;
+        margin-left:10px;
+        position:fixed;
 }
       
 .suggestions__profiles_content{
@@ -124,6 +131,10 @@ function suggestionProfile() {
         .suggestions__profiles_followedBy{
           color:#8e8e8e;
           font-weight:400;
+          overflow-wrap:break-word;
+          overflow:hidden;
+          text-overflow:ellipsis;
+          max-width:100px;
         }
       }
 
@@ -149,14 +160,14 @@ function suggestionProfile() {
     return (
       
       // Main profile
-      <div className="container" css={styles} style={{display: "flex", justifyContent:"space-around", width:'51.5vw', marginLeft: '20%'}}>
+      <div className="container" css={styles} style={{display: "flex", justifyContent:"center", width:'100%'}}>
         <div className="suggestions__profile_main">
           <div className="suggestions__Mainprofile_content">
             <div className="suggestions__Mainprofile_img">
                 <img src="https://via.placeholder.com/60" alt="Pfp" />
             </div>
             <div className="suggestions__Mainprofile_names">
-               <span><a href="#"><div style={{maxWidth: '20%', overflowWrap:"break-word"}}>-username-</div></a></span> 
+               <span><a href="#"><div style={{maxWidth: '110px', overflowWrap:"break-word", overflow:"hidden", textOverflow:"ellipsis"}}>-username-</div></a></span> 
               <div className="suggestions__Mainprofile_fullname">-usersfullname-</div>
             </div>
             <div className="suggestions__Mainprofile_switch">
@@ -178,16 +189,15 @@ function suggestionProfile() {
               <img src="https://via.placeholder.com/35" alt="Pfp" />
                 </div>
                 <div className="suggestions__profiles_namefollowed">
-                <span><a href="#"><div style={{maxWidth: '20%', overflowWrap:"break-word"}}>Profile_Names</div></a></span>
+                <span><a href="#"><div style={{maxWidth: '130px', overflowWrap:"break-word", overflow:"hidden", textOverflow:"ellipsis"}}>Profile_Name</div></a></span>
                 <div className="suggestions__profiles_followedBy">Followed by</div>
                 </div>
                 <div className="suggestions__profile_follow">
               <a href="#"><div>Follow</div></a>
             </div>
-              </div>  
+              </div>    
           {/* Profiles */}
         </div>
-
       </div>
 
     );
