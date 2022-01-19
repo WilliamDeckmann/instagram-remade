@@ -10,6 +10,11 @@ import NavbarMain from '../templates/NavbarMain';
 import Home from "../pages/Home";
 import Profile from "../pages/Profile";
 
+import Saved from "../routes/saved";
+import Tagged from "../routes/tagged";
+import Posts from "../routes/posts";
+import Invoice from "../routes/invoice";
+
 function App() {
 
   // This is only af test theme, it will be updated later...
@@ -82,6 +87,19 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/user" element={<Profile />} />
+          <Route path="saved" element={<Saved />} />
+          <Route path="tagged" element={<Tagged />} />
+          <Route path="posts" element={<Posts />}>
+            <Route
+              index
+              element={
+                <main>
+                  <div>Select an post</div>
+                </main>
+              }
+            />
+            <Route path=":invoiceId" element={<Invoice />} />
+          </Route>
           <Route path="*" element={<p>Not Found</p>} />
         </Routes>
       </main>
