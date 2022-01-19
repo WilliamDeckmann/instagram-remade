@@ -5,14 +5,17 @@ import { Route, Routes } from "react-router-dom";
 // Templates
 import UserInfo from "../templates/UserInfo";
 import ProfileMenu from "../templates/ProfileMenu";
-import GalleryContainer from "../templates/GalleryContainer";
+import ProfileGallery from "../templates/ProfileGallery";
+import BookmarkGallery from "../templates/BookmarkGallery";
 
 // Components
+import ThinText from "../components/ThinText";
 import Footer from "../components/Footer";
 
 const Profile = () => {
 
-  const Styles = css`
+  // Styles
+  const styles = css`
     display: flex;
     justify-content: center;
 
@@ -31,15 +34,15 @@ const Profile = () => {
   `;
 
   return (
-    <div className="Profile" css={Styles}>
+    <div className="Profile" css={styles}>
       <main className="Profile__main">
         <UserInfo />
         <ProfileMenu />
         <Routes>
-          <Route exact path="/" element={<GalleryContainer />} />
-          <Route exact path="/saved" element={<p>Bookmarks go here</p>} />
-          <Route exact path="/tagged" element={<p>Tagged go here</p>} />
-          <Route path="*" element={<p>Not Found</p>} />
+          <Route exact path="/" element={<ProfileGallery />} />
+          <Route exact path="/saved" element={<BookmarkGallery />} />
+          <Route exact path="/tagged" element={<ThinText text="..." />} />
+          <Route path="*" element={<ThinText text="Nothing found..." />} />
         </Routes>
         <Footer />
       </main>

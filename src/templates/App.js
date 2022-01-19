@@ -3,12 +3,15 @@ import { css, useTheme } from "@emotion/react";
 import { Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "@emotion/react";
 
-// Templates
-import NavbarMain from '../templates/NavbarMain';
-
 // Pages
 import Home from "../pages/Home";
 import Profile from "../pages/Profile";
+
+// Templates
+import NavbarMain from '../templates/NavbarMain';
+
+// Components
+import ThinText from "../components/ThinText";
 
 function App() {
 
@@ -78,7 +81,7 @@ function App() {
   `;
 
   return (
-    <ThemeProvider theme={styles}>
+    <ThemeProvider theme={main}>
       <div className="App" css={styles}>
         <NavbarMain />
         <main className="Main">
@@ -88,7 +91,7 @@ function App() {
               <Route exact path="/user/saved" element={<Profile />} />
               <Route exact path="/user/tagged" element={<Profile />} />
             </Route>
-            <Route path="*" element={<p>Not Found</p>} />
+            <Route path="*" element={<ThinText text="Nothing found..." />} />
           </Routes>
         </main>
       </div>
