@@ -70,6 +70,9 @@ function App() {
     ul {
       padding: 0;
       margin: 0;
+    };
+
+    li {
       list-style-type: none;
     };
   `;
@@ -77,14 +80,17 @@ function App() {
   return (
     <ThemeProvider theme={styles}>
       <div className="App" css={styles}>
-      <NavbarMain />
-      <main className="Main">
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/user" element={<Profile />} />
-          <Route path="*" element={<p>Not Found</p>} />
-        </Routes>
-      </main>
+        <NavbarMain />
+        <main className="Main">
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/user" element={<Profile />}>
+              <Route exact path="/user/saved" element={<Profile />} />
+              <Route exact path="/user/tagged" element={<Profile />} />
+            </Route>
+            <Route path="*" element={<p>Not Found</p>} />
+          </Routes>
+        </main>
       </div>
      </ThemeProvider>
   );

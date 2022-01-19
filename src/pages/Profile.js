@@ -1,7 +1,13 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
+import { Route, Routes } from "react-router-dom";
+
+// Templates
 import UserInfo from "../templates/UserInfo";
-import Gallery from "../components/Gallery";
+import ProfileMenu from "../templates/ProfileMenu";
+import GalleryContainer from "../templates/GalleryContainer";
+
+// Components
 import Footer from "../components/Footer";
 
 const Profile = () => {
@@ -28,7 +34,13 @@ const Profile = () => {
     <div className="Profile" css={Styles}>
       <main className="Profile__main">
         <UserInfo />
-        <Gallery />
+        <ProfileMenu />
+        <Routes>
+          <Route exact path="/" element={<GalleryContainer />} />
+          <Route exact path="/saved" element={<p>Bookmarks go here</p>} />
+          <Route exact path="/tagged" element={<p>Tagged go here</p>} />
+          <Route path="*" element={<p>Not Found</p>} />
+        </Routes>
         <Footer />
       </main>
     </div>
