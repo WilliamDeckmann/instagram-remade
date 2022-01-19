@@ -2,16 +2,22 @@
 import { css, useTheme } from "@emotion/react";
 import { Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "@emotion/react";
+
+// Templates
+import NavbarMain from '../templates/NavbarMain';
+
+// Pages
 import Home from "../pages/Home";
 import Profile from "../pages/Profile";
 
 function App() {
-  
+
   // This is only af test theme, it will be updated later...
   const main = {
     backgroundColor: "lightblue",
   };
 
+  // Style (resets)
   const styles = css`
     padding: 0;
     margin: 0;
@@ -48,7 +54,6 @@ function App() {
     };
 
     img, video {
-      width: 100%;
       display: block;
     };
 
@@ -70,16 +75,16 @@ function App() {
   `;
 
   return (
-    <ThemeProvider theme={main}>
+    <ThemeProvider theme={styles}>
       <div className="App" css={styles}>
-        "Header"
-        <main className="Main">
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route exact path="/user" element={<Profile />} />
-            <Route path="*" element={<p>Not Found</p>} />
-          </Routes>
-        </main>
+      <NavbarMain />
+      <main className="Main">
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/user" element={<Profile />} />
+          <Route path="*" element={<p>Not Found</p>} />
+        </Routes>
+      </main>
       </div>
      </ThemeProvider>
   );

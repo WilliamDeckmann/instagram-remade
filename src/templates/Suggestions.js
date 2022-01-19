@@ -44,7 +44,7 @@ function suggestionProfile() {
           }
         }
       }
-
+      
       .suggestions__Mainprofile_switch{
         position: relative;
         left:55px;
@@ -158,7 +158,6 @@ function suggestionProfile() {
         img{
         border-radius:50%;
       }
-
     `;
     return (
       
