@@ -34,7 +34,7 @@ const Home = () => {
                 <CardContainer />
                 <div className="Test-container">
                     <Suggestions />
-                    <Footer />
+                   <div style={{position:"fixed", maxWidth:"350px"}}><Footer /></div>
                 </div>
                 <Slider />
             </main>
