@@ -3,6 +3,7 @@ import { css, useTheme } from "@emotion/react";
 
 const SocialIcon = (props) => {
 
+    // Style
     const styles = css`
         height: 24px;
     `;

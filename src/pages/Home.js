@@ -1,5 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
+import Slider from "../components/Slider";
+import Footer from "../components/Footer";
 import CardContainer from "../templates/CardContainer";
 import Suggestions from '../templates/Suggestions';
 
@@ -8,7 +10,6 @@ const Home = () => {
     const Styles = css`
         display: flex;
         justify-content: center;
-
         .Home__main {
             max-width: 935px;
             width: 100%;
@@ -24,6 +25,7 @@ const Home = () => {
         //     border: 1px solid red;
         //     text-align: center;
         // };
+
     `;
 
     return (
@@ -32,7 +34,9 @@ const Home = () => {
                 <CardContainer />
                 <div className="Test-container">
                     <Suggestions />
+                    <Footer />
                 </div>
+                <Slider />
             </main>
         </div>
     );
