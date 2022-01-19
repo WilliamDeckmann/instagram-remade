@@ -2,9 +2,9 @@
 import useFetch from "../hooks/useFetch";
 
 // Components
-import CardList from "./CardList";
+import GalleryList from "./GalleryList";
 
-const CardContainer = () => {
+const GalleryContainer = () => {
 
     // Style
     const {
@@ -14,12 +14,12 @@ const CardContainer = () => {
     } = useFetch("https://jsonplaceholder.typicode.com/users");
     
     return (
-        <div className="Card-container">
+        <div className="Gallery-container">
             {error && <div>{error}</div>}
             {isPending && <div>Loading...</div>}
-            {data && <CardList data={data} />}
+            {data && <GalleryList data={data} />}
         </div>
     );
 }
  
-export default CardContainer;
+export default GalleryContainer;
