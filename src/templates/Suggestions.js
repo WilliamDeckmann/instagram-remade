@@ -1,9 +1,11 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
+import Data from "../json/Suggestions.json";
 
 function suggestionProfile() {
   const styles = css`
 
+  
   // User main profile
       .suggestions__Mainprofile_content{
         display:flex;
@@ -185,23 +187,29 @@ function suggestionProfile() {
             {/* Recommended text */}
 
             {/* Profiles */}
-              <div className="suggestions__profiles_content">
+              {Data.users.map(item => (
+        <div key={item.id} >
+        <div className="suggestions__profiles_content">
                 <div className="suggestions__profiles_img">
               <img src="https://via.placeholder.com/35" alt="Pfp" />
                 </div>
                 <div className="suggestions__profiles_namefollowed">
-                <span><a href="#"><div style={{maxWidth: '130px', overflowWrap:"break-word", overflow:"hidden", textOverflow:"ellipsis"}}>Profile_Name</div></a></span>
-                <div className="suggestions__profiles_followedBy">Followed by</div>
+                <span><a href="#"><div style={{maxWidth: '130px', overflowWrap:"break-word", overflow:"hidden", textOverflow:"ellipsis"}}>{item.userName}</div></a></span>
+                <div className="suggestions__profiles_followedBy">Followers {item.følgesAf}</div>
                 </div>
                 <div className="suggestions__profile_follow">
               <a href="#"><div>Follow</div></a>
             </div>
-              </div>    
+              </div>
+  </div>
+))} 
           {/* Profiles */}
         </div>
+         
       </div>
 
     );
 }
+console.log(Data)
 
 export default suggestionProfile;
