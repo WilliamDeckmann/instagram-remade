@@ -9,6 +9,7 @@ import Profile from "../pages/Profile";
 
 // Templates
 import NavbarMain from '../templates/NavbarMain';
+import ApiFetchTester from '../templates/ApiFetchTester';
 
 // Components
 import ThinText from "../components/ThinText";
@@ -93,6 +94,7 @@ function App() {
           </Routes>
         </main>
       </div>
+      <ApiFetchTester />
      </ThemeProvider>
   );
 }

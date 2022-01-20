@@ -14,7 +14,7 @@ const Card = (props) => {
 
     // (Only for testing)
     const {id} = props;
-    console.log(props);
+    //console.log(props);
 
     // Style
     const styles = css`
