@@ -27,10 +27,10 @@ const GalleryItemHover = () => {
         };
 
         .Gallery-item-hover__left, .Gallery-item-hover__right {
-          color: white;
-          display: flex;
-          place-items: center;
-          gap: 10px;
+            color: white;
+            display: flex;
+            place-items: center;
+            gap: 10px;
         };
 
         .Gallery-item-hover__left {
@@ -65,5 +65,5 @@ const GalleryItemHover = () => {
         </div>
     );
 }
- 
+
 export default GalleryItemHover;
