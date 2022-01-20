@@ -1,8 +1,10 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
+import Data from "../json/Suggestions.json";
 
 function suggestionProfile() {
   const styles = css`
+
 
   // User main profile
       .suggestions__Mainprofile_content{
@@ -42,7 +44,7 @@ function suggestionProfile() {
           }
         }
       }
-      
+
       .suggestions__Mainprofile_switch{
         position: relative;
         left:55px;
@@ -50,7 +52,7 @@ function suggestionProfile() {
         font-size: 12px;
         font-weight:600;
         a{
-          text-decoration:none; 
+          text-decoration:none;
           color:#0095f6;
          }
       }
@@ -65,7 +67,7 @@ function suggestionProfile() {
       }
 
       a{
-       text-decoration:none; 
+       text-decoration:none;
        color:#262626;
       }
 
@@ -95,7 +97,8 @@ function suggestionProfile() {
 
 // Recommended profiles
 .container{
-} 
+  min-height: 100%;
+}
 
 .suggestions__profile_main{
         max-width: 100%;
@@ -103,7 +106,7 @@ function suggestionProfile() {
         margin-left:10px;
         position:fixed;
 }
-      
+
 .suggestions__profiles_content{
         display:flex;
         justify-content:center;
@@ -145,7 +148,7 @@ function suggestionProfile() {
         font-size: 12px;
         font-weight:600;
         a{
-          text-decoration:none; 
+          text-decoration:none;
           color:#0095f6;
          }
       }
@@ -157,50 +160,56 @@ function suggestionProfile() {
         border-radius:50%;
       }
     `;
-    return (
-      
-      // Main profile
-      <div className="container" css={styles} style={{display: "flex", justifyContent:"center", width:'100%'}}>
-        <div className="suggestions__profile_main">
-          <div className="suggestions__Mainprofile_content">
-            <div className="suggestions__Mainprofile_img">
-                <img src="https://via.placeholder.com/60" alt="Pfp" />
-            </div>
-            <div className="suggestions__Mainprofile_names">
-               <span><a href="#"><div style={{maxWidth: '110px', overflowWrap:"break-word", overflow:"hidden", textOverflow:"ellipsis"}}>-username-</div></a></span> 
-              <div className="suggestions__Mainprofile_fullname">-usersfullname-</div>
-            </div>
-            <div className="suggestions__Mainprofile_switch">
-              <a href="#"><div>Switch</div></a>
-            </div>
-              </div> 
-        {/* Main profile */}
-            
-            {/* Recommended text */}
-              <div className="suggestions__recommended_main">
-              <div className="suggestions__recommended_text">Recommended for you</div>
-              <a href="#"><div>See all</div></a>
-              </div>
-            {/* Recommended text */}
+  return (
 
-            {/* Profiles */}
-              <div className="suggestions__profiles_content">
-                <div className="suggestions__profiles_img">
-              <img src="https://via.placeholder.com/35" alt="Pfp" />
-                </div>
-                <div className="suggestions__profiles_namefollowed">
-                <span><a href="#"><div style={{maxWidth: '130px', overflowWrap:"break-word", overflow:"hidden", textOverflow:"ellipsis"}}>Profile_Name</div></a></span>
-                <div className="suggestions__profiles_followedBy">Followed by</div>
-                </div>
-                <div className="suggestions__profile_follow">
-              <a href="#"><div>Follow</div></a>
-            </div>
-              </div>    
-          {/* Profiles */}
+    // Main profile
+    <div className="container" css={styles} style={{ display: "flex", justifyContent: "center", width: '100%', height: "450px" }}>
+      <div className="suggestions__profile_main">
+        <div className="suggestions__Mainprofile_content">
+          <div className="suggestions__Mainprofile_img">
+            <img src="https://via.placeholder.com/60" alt="Pfp" />
+          </div>
+          <div className="suggestions__Mainprofile_names">
+            <span><a href="#"><div style={{ maxWidth: '110px', overflowWrap: "break-word", overflow: "hidden", textOverflow: "ellipsis" }}>-username-</div></a></span>
+            <div className="suggestions__Mainprofile_fullname">-usersfullname-</div>
+          </div>
+          <div className="suggestions__Mainprofile_switch">
+            <a href="#"><div>Switch</div></a>
+          </div>
         </div>
+        {/* Main profile */}
+
+        {/* Recommended text */}
+        <div className="suggestions__recommended_main">
+          <div className="suggestions__recommended_text">Recommended for you</div>
+          <a href="#"><div>See all</div></a>
+        </div>
+        {/* Recommended text */}
+
+        {/* Profiles */}
+        {Data.users.map(item => (
+          <div key={item.id} >
+            <div className="suggestions__profiles_content">
+              <div className="suggestions__profiles_img">
+                <img src="https://via.placeholder.com/35" alt="Pfp" />
+              </div>
+              <div className="suggestions__profiles_namefollowed">
+                <span><a href="#"><div style={{ maxWidth: '130px', overflowWrap: "break-word", overflow: "hidden", textOverflow: "ellipsis" }}>{item.userName}</div></a></span>
+                <div className="suggestions__profiles_followedBy">Followers {item.følgesAf}</div>
+              </div>
+              <div className="suggestions__profile_follow">
+                <a href="#"><div>Follow</div></a>
+              </div>
+            </div>
+          </div>
+        ))}
+        {/* Profiles */}
       </div>
 
-    );
+    </div>
+
+  );
 }
+console.log(Data)
 
 export default suggestionProfile;
