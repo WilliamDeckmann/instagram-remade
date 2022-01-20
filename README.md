@@ -2,7 +2,7 @@
 
 ## Collaborators
 
-- Daniel
+- Daniel/Caia
 - William
 - Mathias
 - Aske
