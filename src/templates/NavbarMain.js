@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 
 const NavbarMain = () => {
 
-    const styles = css`
+  const styles = css`
 
     *{
         margin: 0;
@@ -27,11 +27,11 @@ const NavbarMain = () => {
         }
     `;
 
-    return (
+  return (
     <nav css={styles}>
-    <Navbar />
+      <Navbar />
     </nav>
-    );
+  );
 }
 
 export default NavbarMain;
