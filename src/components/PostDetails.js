@@ -24,7 +24,7 @@ import Bookmark from "../assets/settingsbookmark.svg";
 import BookmarkHover from "../assets/settingsbookmarkgrey.svg";
 import BookmarkActive from "../assets/bookmarkfilled.svg";
 
-const PostDetails = () => {
+const PostDetails = (props) => {
 
     // Icon states
     const [ likeButton, setLikeButton ] = useState(Heart);
@@ -40,10 +40,29 @@ const PostDetails = () => {
         setLikeCount(!likeCount);
     };
 
+    // Bookmark Array
+    let bookmarkArray = [];
+    if (localStorage.getItem("bookmarks")) {
+        bookmarkArray = JSON.parse(localStorage.getItem("bookmarks"));
+    };
+
     // Bookmark state
     const [ bookmarkState, setBookmarkState ] = useState(false);
     const UpdateBookmarkState = () => {
         setBookmarkState(!bookmarkState);
+        let cardObject = {
+            id: props.id,
+            name: props.name,
+            username: props.username,
+        };
+
+        if(bookmarkState) {
+            bookmarkArray = bookmarkArray.filter(item => cardObject.id != item.id);
+            localStorage.setItem("bookmarks", JSON.stringify(bookmarkArray));
+        } else {
+            bookmarkArray.push(cardObject);
+            localStorage.setItem("bookmarks", JSON.stringify(bookmarkArray));
+        };
     };
 
     // Style

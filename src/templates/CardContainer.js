@@ -14,7 +14,7 @@ const CardContainer = () => {
     } = useFetch("https://jsonplaceholder.typicode.com/users");
     
     return (
-        <div className="CardContainer">
+        <div className="Card-container">
             {error && <div>{error}</div>}
             {isPending && <div>Loading...</div>}
             {data && <CardList data={data} />}
