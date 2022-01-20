@@ -16,37 +16,42 @@ const Profile = () => {
 
   // Styles
   const styles = css`
-    display: flex;
-    justify-content: center;
+      display: flex;
+      justify-content: center;
 
-    .Profile__main {
-        max-width: 935px;
-        width: 100%;
-        margin: 30px 20px 0;
-    };
+      .Profile__main {
+          max-width: 935px;
+          width: 100%;
+          margin: 30px 20px 0;
+      };
 
-    .Test-container {
-      width: 100%;
-      height: 500px;
-      border: 1px solid red;
-      text-align: center;
-    };
+      .Test-container {
+          width: 100%;
+          height: 500px;
+          border: 1px solid red;
+          text-align: center;
+      };
+
+      .footermargin {
+          margin-top: 40px;
+          margin-bottom: 40px;
+      };
   `;
 
   return (
-    <div className="Profile" css={styles}>
-      <main className="Profile__main">
-        <UserInfo />
-        <ProfileMenu />
-        <Routes>
-          <Route exact path="/" element={<ProfileGallery />} />
-          <Route exact path="/saved" element={<BookmarkGallery />} />
-          <Route exact path="/tagged" element={<ThinText text="..." />} />
-          <Route path="*" element={<ThinText text="Nothing found..." />} />
-        </Routes>
-        <Footer />
-      </main>
-    </div>
+      <div className="Profile" css={styles}>
+          <main className="Profile__main">
+              <UserInfo />
+              <ProfileMenu />
+              <Routes>
+                  <Route exact path="/" element={<ProfileGallery />} />
+                  <Route exact path="/saved" element={<BookmarkGallery />} />
+                  <Route exact path="/tagged" element={<ThinText text="..." />} />
+                  <Route path="*" element={<ThinText text="Nothing found..." />} />
+              </Routes>
+              <div className="footermargin"><Footer /></div>
+          </main>
+      </div>
   );
 }
 
