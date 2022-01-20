@@ -19,6 +19,18 @@ const Home = () => {
             grid-template-columns: auto 293px;
             gap: 28px;
         };
+
+
+        .Test-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            height: 56vh;
+            text-align: center;
+        };
+
+
     `;
 
     return (
@@ -27,7 +39,12 @@ const Home = () => {
                 <CardContainer />
                 <aside className="Home__aside">
                     <Suggestions />
-                    <Footer />
+
+                    <div>
+                       <div style={{position: 'fixed',maxWidth:"350px"}}><Footer /></div>
+                    </div>
+                </div>
+                  <Footer />
                 </aside>
                 <Slider />
             </main>
