@@ -19,12 +19,14 @@ const Home = () => {
             gap: 28px;
         };
 
-        // .Test-container {
-        //     width: 100%;
-        //     height: 500px;
-        //     border: 1px solid red;
-        //     text-align: center;
-        // };
+        .Test-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            height: 56vh;
+            text-align: center;
+        };
 
     `;
 
@@ -34,7 +36,9 @@ const Home = () => {
                 <CardContainer />
                 <div className="Test-container">
                     <Suggestions />
-                   <div style={{position:"fixed", maxWidth:"350px"}}><Footer /></div>
+                    <div>
+                       <div style={{position: 'fixed',maxWidth:"350px"}}><Footer /></div>
+                    </div>
                 </div>
                 <Slider />
             </main>

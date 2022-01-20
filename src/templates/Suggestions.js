@@ -97,6 +97,7 @@ function suggestionProfile() {
 
 // Recommended profiles
 .container{
+  min-height: 100%;
 } 
 
 .suggestions__profile_main{

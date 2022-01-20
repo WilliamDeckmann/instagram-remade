@@ -6,7 +6,6 @@ function Footer() {
     const gallery = css`
 
         color: yellow;
-        padding: 60px;
         gap: 20px;
 
         .footer__item1 {
