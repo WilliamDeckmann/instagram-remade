@@ -39,12 +39,10 @@ const Home = () => {
                 <CardContainer />
                 <aside className="Home__aside">
                     <Suggestions />
-
                     <div>
                        <div style={{position: 'fixed',maxWidth:"350px"}}><Footer /></div>
                     </div>
-                </div>
-                  <Footer />
+                  {/* <Footer /> */}
                 </aside>
                 <Slider />
             </main>
