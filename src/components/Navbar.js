@@ -61,7 +61,7 @@ const Navbar = () => {
 
   return (
       <div className="nav-wrapper" css={styles}>
-          <a href="/home"><img className="logo" src={logo} alt="" /></a>
+          <a href="/"><img className="logo" src={logo} alt="" /></a>
           <div className="search-main">
               <input type="text" name="text" className="search" placeholder="&#xF002; Søg" />
           </div>
