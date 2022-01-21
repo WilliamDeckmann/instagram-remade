@@ -40,9 +40,8 @@ const Home = () => {
                 <aside className="Home__aside">
                     <Suggestions />
                     <div>
-                       <div style={{position: 'fixed',maxWidth:"350px"}}><Footer /></div>
+                        <div style={{position: 'fixed',maxWidth:"350px"}}><Footer /></div>
                     </div>
-                  {/* <Footer /> */}
                 </aside>
                 <Slider />
             </main>
