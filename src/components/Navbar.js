@@ -61,13 +61,13 @@ const Navbar = () => {
 
   return (
       <div className="nav-wrapper" css={styles}>
-          <a href="/home"><img className="logo" src={logo} alt="" /></a>
+          <a href="/"><img className="logo" src={logo} alt="" /></a>
           <div className="search-main">
               <input type="text" name="text" className="search" placeholder="&#xF002; Søg" />
           </div>
           <div className="icons-wrap" css={styles}>
               <a href="#" className="search-btn"></a>
-              <a href="/home"><img src={home} alt="" /></a>
+              <a href="/"><img src={home} alt="" /></a>
               <a href="index.html"><img className='icons' src={paperplane} alt="" /></a>
               <a href="index.html"><img className='icons' src={plus} alt="" /></a>
               <a href="index.html"><img className='icons' src={explore} alt="" /></a>
