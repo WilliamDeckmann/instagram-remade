@@ -12,6 +12,7 @@ import NavbarMain from './NavbarMain';
 
 // Components
 import ThinText from "../components/ThinText";
+import GDPR from "../components/GDPR";
 
 function App() {
 
@@ -22,6 +23,10 @@ function App() {
 
   // Style (resets)
   const styles = css`
+    .Main {
+      background-color: #fafafa;
+    };
+
     * {
       box-sizing: border-box;
       font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
@@ -81,6 +86,7 @@ function App() {
   return (
     <ThemeProvider theme={main}>
       <div className="App" css={styles}>
+        <GDPR />
         <NavbarMain />
         <main className="Main">
           <Routes>
