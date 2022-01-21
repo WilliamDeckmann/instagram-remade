@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
+import { Link } from "react-router-dom";
 
 import heart from '../assets/heart.svg'
 import home from '../assets/home.svg'
@@ -61,18 +62,18 @@ const Navbar = () => {
 
   return (
       <div className="nav-wrapper" css={styles}>
-          <a href="/home"><img className="logo" src={logo} alt="" /></a>
+          <Link to="/"><img className="logo" src={logo} alt="" /></Link>
           <div className="search-main">
               <input type="text" name="text" className="search" placeholder="&#xF002; Søg" />
           </div>
           <div className="icons-wrap" css={styles}>
-              <a href="#" className="search-btn"></a>
-              <a href="/home"><img src={home} alt="" /></a>
-              <a href="index.html"><img className='icons' src={paperplane} alt="" /></a>
-              <a href="index.html"><img className='icons' src={plus} alt="" /></a>
-              <a href="index.html"><img className='icons' src={explore} alt="" /></a>
-              <a href="index.html"><img className='icons' src={heart} alt="" /></a>
-              <a href="/user" className="profile-btn"><img src={profile} alt="" /></a>
+              <Link to="/" className="search-btn"></Link>
+              <Link to="/"><img src={home} alt="" /></Link>
+              <Link to="/"><img className='icons' src={paperplane} alt="" /></Link>
+              <Link to="/"><img className='icons' src={plus} alt="" /></Link>
+              <Link to="/"><img className='icons' src={explore} alt="" /></Link>
+              <Link to="/"><img className='icons' src={heart} alt="" /></Link>
+              <Link to="/user" className="profile-btn"><img src={profile} alt="" /></Link>
           </div>
       </div>
   );
