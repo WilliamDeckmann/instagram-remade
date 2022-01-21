@@ -5,10 +5,7 @@ import { css, useTheme } from "@emotion/react";
 import PostImage from "../components/PostImage";
 import GalleryItemHover from "./GalleryItemHover";
 
-// Assets
-import Image from "../assets/image-test.jpg";
-
-const GalleryItem = () => {
+const GalleryItem = (props) => {
 
     // Style
     const styles = css`
@@ -38,7 +35,7 @@ const GalleryItem = () => {
     return (
         <div className="Gallery-item" css={styles}>
             <button className="Gallery-item__button">
-                <PostImage img={Image} alt="image"/>
+                <PostImage img={props.media_url} alt="image"/>
                 <GalleryItemHover />
             </button>
         </div>

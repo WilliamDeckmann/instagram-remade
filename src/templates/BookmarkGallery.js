@@ -11,8 +11,8 @@ const BookmarkGallery = () => {
     };
     
     return (
-        <div className="Gallery-container">
-            {localStorage.getItem("bookmarks") ? <GalleryList data={bookmarkArray} /> : <BookmarkPlaceholder  />}
+        <div className="Bookmark-gallery">
+            {localStorage.getItem("bookmarks") ? <GalleryList data={bookmarkArray} /> : <BookmarkPlaceholder />}
         </div>
     );
 }

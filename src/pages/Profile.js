@@ -46,7 +46,7 @@ const Profile = () => {
               <Routes>
                   <Route exact path="/" element={<ProfileGallery />} />
                   <Route exact path="/saved" element={<BookmarkGallery />} />
-                  <Route exact path="/tagged" element={<ThinText text="..." />} />
+                  <Route exact path="/tagged" element="" />
                   <Route path="*" element={<ThinText text="Nothing found..." />} />
               </Routes>
               <div className="footermargin"><Footer /></div>
