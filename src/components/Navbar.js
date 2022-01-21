@@ -67,7 +67,7 @@ const Navbar = () => {
           </div>
           <div className="icons-wrap" css={styles}>
               <a href="#" className="search-btn"></a>
-              <a href="/home"><img src={home} alt="" /></a>
+              <a href="/"><img src={home} alt="" /></a>
               <a href="index.html"><img className='icons' src={paperplane} alt="" /></a>
               <a href="index.html"><img className='icons' src={plus} alt="" /></a>
               <a href="index.html"><img className='icons' src={explore} alt="" /></a>
