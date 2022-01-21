@@ -39,9 +39,11 @@ const Card = (props) => {
             <header className="Card__header">
                 <UserSection {...props} />
             </header>
+            
             <main className="Card__main">
                 <PostImage img={Image} alt="image" />
             </main>
+
             <footer className="Card__footer">
                 <PostDetails {...props} />
                 <CommentInput />
