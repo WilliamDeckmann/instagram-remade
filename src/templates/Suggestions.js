@@ -17,7 +17,7 @@ function suggestionProfile() {
         align-items:start;
         flex-direction: column;
         position:relative;
-        right:40px;
+        right:45px;
         font-size:14px;
         font-weight:600;
         max-width: 100%;
@@ -59,7 +59,7 @@ function suggestionProfile() {
 
       .suggestions__Mainprofile_img{
         position: relative;
-        right:60px;
+        right:65px;
         top:-10px;
         img{
         border-radius:50%;
@@ -84,13 +84,13 @@ function suggestionProfile() {
         a{
           font-size:12px;
           position:relative;
-          left:65px;
+          left:90px;
         }
       }
 
       .suggestions__recommended_text{
         position:relative;
-        right:60px;
+        right:90px;
         color:#8e8e8e;
         font-size:14px;
       }
@@ -125,7 +125,7 @@ function suggestionProfile() {
         overflow:hidden;
         text-overflow:ellipsis;
         white-space:nowrap;
-        max-width: 47%;
+        max-width: 70%;
         span{
           max-width: 100%;
           overflow: hidden;
@@ -143,7 +143,7 @@ function suggestionProfile() {
 
       .suggestions__profile_follow{
         position: relative;
-        left:125px;
+        left:115px;
         top:10px;
         font-size: 12px;
         font-weight:600;
@@ -174,15 +174,15 @@ function suggestionProfile() {
             <div className="suggestions__Mainprofile_fullname">-usersfullname-</div>
           </div>
           <div className="suggestions__Mainprofile_switch">
-            <a href="#"><div>Switch</div></a>
+            <a href="#"><div>Skift</div></a>
           </div>
         </div>
         {/* Main profile */}
 
         {/* Recommended text */}
         <div className="suggestions__recommended_main">
-          <div className="suggestions__recommended_text">Recommended for you</div>
-          <a href="#"><div>See all</div></a>
+          <div className="suggestions__recommended_text">Forslag til dig</div>
+          <a href="#"><div>Se alle</div></a>
         </div>
         {/* Recommended text */}
 
@@ -195,10 +195,10 @@ function suggestionProfile() {
               </div>
               <div className="suggestions__profiles_namefollowed">
                 <span><a href="#"><div style={{ maxWidth: '130px', overflowWrap: "break-word", overflow: "hidden", textOverflow: "ellipsis" }}>{item.userName}</div></a></span>
-                <div className="suggestions__profiles_followedBy">Followers {item.følgesAf}</div>
+                <div className="suggestions__profiles_followedBy">Følges af {item.følgesAf}</div>
               </div>
               <div className="suggestions__profile_follow">
-                <a href="#"><div>Follow</div></a>
+                <a href="#"><div>Følg</div></a>
               </div>
             </div>
           </div>

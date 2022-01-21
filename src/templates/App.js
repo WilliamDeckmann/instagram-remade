@@ -84,7 +84,7 @@ function App() {
         <NavbarMain />
         <main className="Main">
           <Routes>
-            <Route exact path="/" element={<Home />} />
+            <Route exact path="/home" element={<Home />} />
             <Route exact path="/user" element={<Profile />}>
               <Route exact path="/user/saved" element={<Profile />} />
               <Route exact path="/user/tagged" element={<Profile />} />
