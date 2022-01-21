@@ -8,7 +8,7 @@ const CardContainer = () => {
 
     // Api data
     const {
-        data: call,
+        data,
         isPending,
         error,
     } = useFetch("https://jsonplaceholder.typicode.com/users");
@@ -24,9 +24,9 @@ const CardContainer = () => {
         <div className="Card-container">
             {error && <div>{error}</div>}
             {isPending && <div>Loading...</div>}
-            {call && <CardList data={call} />}
+            {data && <CardList data={data} />}
         </div>
     );
-} // <CardList data={call} />
+}
  
 export default CardContainer;
