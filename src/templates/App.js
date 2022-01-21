@@ -12,6 +12,7 @@ import NavbarMain from './NavbarMain';
 
 // Components
 import ThinText from "../components/ThinText";
+import GDPR from "../components/GDPR";
 
 function App() {
 
@@ -81,6 +82,7 @@ function App() {
   return (
     <ThemeProvider theme={main}>
       <div className="App" css={styles}>
+        <GDPR />
         <NavbarMain />
         <main className="Main">
           <Routes>
