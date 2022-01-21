@@ -15,7 +15,7 @@ const CardList = (props) => {
 
     return (
         <div className="Card-list" css={styles}>
-            {props.data.map(card => (
+            {props.data.data.map(card => (
                 <Card {...card} key={card.id} />
             ))}
         </div>
