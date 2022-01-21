@@ -7,12 +7,7 @@ import PostDetails from "../components/PostDetails";
 import PostImage from "../components/PostImage";
 import UserSection from "../components/UserSection";
 
-// Assets
-import Image from "../assets/image-test.jpg";
-
 const Card = (props) => {
-
-    console.log(props);
 
     // Style
     const styles = css`
@@ -21,6 +16,8 @@ const Card = (props) => {
         display: flex;
         flex-direction: column;
         border: 1px solid lightgrey;
+        border-radius: 4px;
+        background-color: white;
 
         .Card__link {
             text-decoration: none;
@@ -39,14 +36,12 @@ const Card = (props) => {
             <header className="Card__header">
                 <UserSection {...props} />
             </header>
-            
             <main className="Card__main">
-                <PostImage img={Image} alt="image" />
+                <PostImage img={props.media_url} alt="image" />
             </main>
-
             <footer className="Card__footer">
                 <PostDetails {...props} />
-                <CommentInput />
+                <CommentInput {...props} />
             </footer>
         </div>
     );

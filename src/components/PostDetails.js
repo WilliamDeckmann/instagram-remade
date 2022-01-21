@@ -40,20 +40,36 @@ const PostDetails = (props) => {
         setLikeCount(!likeCount);
     };
 
+    // Bookmark state
+    const [ bookmarkState, setBookmarkState ] = useState(false);
+
     // Bookmark Array
     let bookmarkArray = [];
     if (localStorage.getItem("bookmarks")) {
         bookmarkArray = JSON.parse(localStorage.getItem("bookmarks"));
     };
 
-    // Bookmark state
-    const [ bookmarkState, setBookmarkState ] = useState(false);
+    // On first page-load (not finished yet)
+    /* window.onload = function () {
+        if(localStorage.getItem("already-loaded") === null) {
+    
+            // Set all local storage
+            localStorage.setItem("already-loaded", "true");
+            localStorage.setItem("bookmarks", JSON.stringify(bookmarkArray));
+
+            // Reload page after local storage is set
+            window.location.reload();
+        };
+    }; */
+
     const UpdateBookmarkState = () => {
         setBookmarkState(!bookmarkState);
         let cardObject = {
             id: props.id,
-            name: props.name,
+            caption: props.caption && props.caption,
             username: props.username,
+            media_url: props.media_url,
+            timestamp: props.timestamp,
         };
 
         if(bookmarkState) {
@@ -91,8 +107,15 @@ const PostDetails = (props) => {
         };
 
         .Post-details__paragraph {
-            display: flex;
-            gap: 4px;
+            
+            // Imports
+            .Bold-text {
+                margin-right: 4px;
+            };
+
+            .Bold-text, .Thin-text {
+                display: inline;
+            };
         };
 
         .Post-details__date {
@@ -132,14 +155,17 @@ const PostDetails = (props) => {
             </header>
             <article className="Post-details__article">
                 <p className="Post-details__like-count">
-                    <BoldText text={likeCount ? 1 : 0} /> <BoldText text="Synes godt om" />
+                    <BoldText text={likeCount ? 1 : 0} />
+                    <BoldText text="Synes godt om" />
                 </p>
                 <p className="Post-details__paragraph">
-                    <BoldText text="user-name" />
-                    <ThinText text="text-body" /> <ThinText text=" ..." /> <ReadMore />
+                    <BoldText text={props.username} />
+                    <ThinText text={props.caption && props.caption} />
+                    {/* <ThinText text=" ..." />
+                    <ReadMore /> */}
                 </p>
                 <p className="Post-details__date">
-                    <DetailsText text="post-date" />
+                    <DetailsText text={props.timestamp.substring(0, 10)} />
                 </p>
             </article>
         </div>

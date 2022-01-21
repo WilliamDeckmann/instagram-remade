@@ -8,9 +8,10 @@ import UserIcon from "./UserIcon";
 import SocialIcon from "./SocialIcon";
 
 // Assets
+import WuGF06 from "../assets/WuGF06.jpg";
 import Dots from "../assets/options.svg";
 
-const UserSection = () => {
+const UserSection = (props) => {
 
     // Style
     const styles = css`
@@ -23,7 +24,7 @@ const UserSection = () => {
             width: 100%;
             padding: 14px 4px 14px 16px;
             display: flex;
-            align-item: center;
+            align-items: center;
             gap: 14px;
         };
 
@@ -51,12 +52,12 @@ const UserSection = () => {
     return (
         <div className="User-section" css={styles}>
             <section className="User-section__left-section">
-                <Link className="User-section__link" to="">
-                    <UserIcon img="" alt="user-icon" />
+                <Link className="User-section__link" to="/user">
+                    <UserIcon img={WuGF06} alt="user-icon" />
                 </Link>
-                <Link className="User-section__link" to="">
+                <Link className="User-section__link" to="/user">
                     <h2 className="User-section__title">
-                        <BoldText text="user-name" />
+                        <BoldText text={props.username} />
                     </h2>
                 </Link>
             </section>

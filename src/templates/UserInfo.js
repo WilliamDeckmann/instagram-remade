@@ -13,6 +13,9 @@ import OptionsButton from "../components/OptionsButton";
 import EditButton from "../components/EditButton";
 import GearButton from "../components/GearButton";
 
+// Assets
+import WuGF06 from "../assets/WuGF06.jpg";
+
 const UserInfo = () => {
 
     // Style
@@ -73,23 +76,23 @@ const UserInfo = () => {
     return (
         <div className="User-info" css={styles}>
             <figure className="User-info__figure">
-                <UserIcon img="" alt="user-icon" />
+                <UserIcon img={WuGF06} alt="user-icon" />
             </figure>
             <section className="User-info__info">
                 <header className="User-info__header">
-                    <UserName text="user-name" />
-                    <section className="User-info__section">
+                    <UserName text="rtswu06" />
+                    {/* <section className="User-info__section">
                         <MessageButton />
                         <FollowButton />
                         <RecommendationButton />
                         <OptionsButton />
-                    </section>
-                    {/* <section className="User-info__section">
+                    </section> */}
+                    <section className="User-info__section">
                         <EditButton />
                         <GearButton />
-                    </section> */}
+                    </section>
                 </header>
-                <ul className="User-info__list">
+                {/* <ul className="User-info__list">
                     <li className="User-info__item">
                         <BoldText text="0" />
                         <ThinText text="opslag" />
@@ -102,8 +105,8 @@ const UserInfo = () => {
                         <BoldText text="0" />
                         <ThinText text="fulgte" />
                     </li>
-                </ul>
-                {/* <ul className="User-info__list">
+                </ul> */}
+                <ul className="User-info__list">
                     <li className="User-info__item">
                         <BoldText text="0" />
                         <ThinText text="opslag" />
@@ -116,9 +119,9 @@ const UserInfo = () => {
                         <BoldText text="0" />
                         <ThinText text="fulgte" />
                     </li>
-                </ul> */}
+                </ul>
                 <p className="User-info__description">
-                    <BoldText text="text-body" />
+                    <BoldText text="Lærer Troels" />
                 </p>
             </section>
         </div>
