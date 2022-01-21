@@ -92,13 +92,8 @@ const GDPR = () => {
     forceUpdate();
   };
 
-  const removebtn = () => {
-    localStorage.removeItem('gdpr');
-    forceUpdate();
-  };
   return (
     <div css={consentstyle}>
-      {/* <button onClick={removebtn}>storage clear</button> */}
       {/* <GDPR /> */}
       {localStorage.getItem("gdpr") ? "" :
         <div className="consent">
@@ -118,4 +113,5 @@ const GDPR = () => {
     </div>
   );
 };
+
 export default GDPR;
