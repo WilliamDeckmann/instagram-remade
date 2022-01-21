@@ -16,7 +16,7 @@ const GalleryList = (props) => {
 
     return (
         <div className="Gallery-list" css={styles}>
-            {props.data.map(item => (
+            {props.data.data.map(item => (
                 <GalleryItem {...item} key={item.id} />
             ))}
         </div>
