@@ -38,7 +38,7 @@ const GDPR = () => {
             gap: 15px;
             padding: 20px;
             width: 530px;
-            height: 250px;
+            height: 270px;
             position: fixed;
             z-index: 11111;
             border: 1px solid green;
@@ -99,14 +99,17 @@ const GDPR = () => {
                 <div className="consent">
                     <div className="consent__overlay">
                         <div className="header">
-                            <h1>Accept cookies from Instagram on this browser?</h1>
+                            <h1>Vil du acceptere cookies fra Instagram på denne browser?</h1>
                             <div><img src={options} /></div>
                         </div>
-                        <span>We use cookies to help personalize content, serve relevant ads and provide a safer experience. Learn more about cookie uses and controls in our <a href="#" className="consent__overlay--policy">Cookie Policy.</a> You can review your controls at any time.</span>
+                        <span>
+
+
+                        Vi bruger cookies som en hjælp til at tilpasse indholdet, levere relevante annoncer samt give en mere sikker oplevelse. Læs mere, om brug af cookies og kontroller i vores <a href="#" className="consent__overlay--policy">politik om cookies.</a> Du kan gennemse dine kontroller når som helst.</span>
                         <hr />
-                        <button onClick={handle1} className="consent__overlay--button">Accept All</button>
+                        <button onClick={handle1} className="consent__overlay--button">Acceptér alle</button>
                         <hr />
-                        <span>Manage Data Settings</span>
+                        <span>Administrer dataindstillinger</span>
                     </div>
                 </div>
             }
