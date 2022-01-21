@@ -210,6 +210,5 @@ function suggestionProfile() {
 
   );
 }
-console.log(Data)
 
 export default suggestionProfile;
