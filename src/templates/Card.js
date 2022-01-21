@@ -37,7 +37,7 @@ const Card = (props) => {
     return (
         <div className="Card" css={styles}>
             <header className="Card__header">
-                <UserSection />
+                <UserSection {...props} />
             </header>
             <main className="Card__main">
                 <PostImage img={Image} alt="image" />
