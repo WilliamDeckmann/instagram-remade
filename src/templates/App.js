@@ -8,7 +8,7 @@ import Home from "../pages/Home";
 import Profile from "../pages/Profile";
 
 // Templates
-import NavbarMain from '../templates/NavbarMain';
+import NavbarMain from './NavbarMain';
 
 // Components
 import ThinText from "../components/ThinText";
