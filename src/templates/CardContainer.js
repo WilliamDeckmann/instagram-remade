@@ -21,9 +21,5 @@ const CardContainer = () => {
         </div>
     );
 }
-
-const ApiFetchTest = () => {
-    //...
-};
  
 export default CardContainer;
