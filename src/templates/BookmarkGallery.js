@@ -1,6 +1,6 @@
 // Templates
 import BookmarkPlaceholder from "./BookmarkPlaceholder";
-import GalleryList from "./GalleryList";
+import BookmarkGalleryList from "./BookmarkGalleryList";
 
 const BookmarkGallery = () => {
 
@@ -12,7 +12,7 @@ const BookmarkGallery = () => {
     
     return (
         <div className="Bookmark-gallery">
-            {localStorage.getItem("bookmarks") ? <GalleryList data={bookmarkArray} /> : <BookmarkPlaceholder />}
+            {localStorage.getItem("bookmarks") ? <BookmarkGalleryList data={bookmarkArray} /> : <BookmarkPlaceholder />}
         </div>
     );
 }
