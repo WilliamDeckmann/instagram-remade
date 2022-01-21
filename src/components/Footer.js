@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
+import Links from "../json/Footer.json";
 import arrow from './../assets/arrow.svg';
 
 function Footer() {
@@ -55,22 +56,15 @@ function Footer() {
     return (
         <footer css={gallery}>
             <div className="footer__item1">
-                <div><a href="#">Meta</a></div>
-                <div><a href="#">About</a></div>
-                <div><a href="#">Blog</a></div>
-                <div><a href="#">Jobs</a></div>
-                <div><a href="#">Help</a></div>
-                <div><a href="#">API</a></div>
-                <div><a href="#">Privacy</a></div>
-                <div><a href="#">Terms</a></div>
-                <div><a href="#">Top Accounts</a></div>
-                <div><a href="#">Hashtags</a></div>
-                <div><a href="#">Locations</a></div>
-                <div><a href="#">Instagram Lite</a></div>
+                {Links.FooterLinks.map(item => (
+                <div key={item.FooterLinks} >
+                <div><a href={item.link}>{item.text}</a></div>
+                </div>
+                ))}
             </div>
             <div className="footer__item2">
                 <div className="langselector">
-                    <div className="langselector__text">English</div>
+                    <div className="langselector__text">Dansk</div>
                     <img src={arrow} className="langselector__image" />
                 </div>
                 <div>© 2022 Instagram from Meta</div>

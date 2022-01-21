@@ -1,0 +1,52 @@
+{
+    "FooterLinks":[
+        {
+            "text": "Meta",
+            "link": "testLink"
+        },
+        {
+            "text": "Om",
+            "link": "testLink"
+        },
+        {
+            "text": "Blog",
+            "link": "testLink"
+        },
+        {
+            "text": "Jobs",
+            "link": "testLink"
+        },
+        {
+            "text": "Hjælp",
+            "link": "testLink"
+        },
+        {
+            "text": "API",
+            "link": "testLink"
+        },
+        {
+            "text": "Beskyttelse af personlige oplysninger",
+            "link": "testLink"
+        },
+        {
+            "text": "Vilkår",
+            "link": "testLink"
+        },
+        {
+            "text": "Relevante konti",
+            "link": "testLink"
+        },
+        {
+            "text": "Hashtags",
+            "link": "testLink"
+        },
+        {
+            "text": "Lokationer",
+            "link": "testLink"
+        },
+        {
+            "text": "Instagram Lite",
+            "link": "testLink"
+        }
+    ]
+}
