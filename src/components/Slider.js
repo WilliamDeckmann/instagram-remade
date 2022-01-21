@@ -6,8 +6,8 @@ import spritemap from "../assets/spritemap.png";
 const Slider = () => {
 
   const slider = css`
-      border: 1px solid grey;
-      border-radius: 5px;
+      border: 1px solid lightgrey;
+      border-radius: 4px;
       background: #ffffff;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -28,7 +28,7 @@ const Slider = () => {
           width: 30px;
           height: 30px;
           background: #7f7f7f;
-          opacity: 0.7;
+          opacity: 0.9;
           border-radius: 50%;
       }
 
@@ -88,16 +88,17 @@ const Slider = () => {
           grid-column: 1/span 3;
           grid-row: 2;
           display: flex;
-          gap: 15px;
-          padding: 20px;
+          gap: 25px;
+          padding: 35px;
           /* overflow: hidden; */
           place-self: center;
       }
 
       .sliderprofile {
-          outline: 1px solid grey;
-          border-radius: 5px;
-          padding: 20px;
+          border: 1px solid lightgrey;
+          border-radius: 4px;
+          padding: 35px;
+          gap: 10px;
           display: grid;
           place-items: center;
       }
