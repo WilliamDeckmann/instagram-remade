@@ -4,6 +4,7 @@ import Slider from "../components/Slider";
 import Footer from "../components/Footer";
 import CardContainer from "../templates/CardContainer";
 import Suggestions from '../templates/Suggestions';
+import StorySlider from "../components/StorySlider"
 
 const Home = () => {
 
@@ -29,7 +30,6 @@ const Home = () => {
             height: 56vh;
             text-align: center;
         };
-
 
     `;
 

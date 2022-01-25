@@ -13,6 +13,8 @@ import NavbarMain from './NavbarMain';
 // Components
 import ThinText from "../components/ThinText";
 import GDPR from "../components/GDPR";
+import DropdownProfile from "../components/DropdownProfile"
+
 
 function App() {
 

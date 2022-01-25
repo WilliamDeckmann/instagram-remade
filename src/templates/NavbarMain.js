@@ -31,6 +31,7 @@ const NavbarMain = () => {
     <nav css={styles}>
       <Navbar />
     </nav>
+    
   );
 }
 
