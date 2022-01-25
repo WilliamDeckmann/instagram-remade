@@ -41,7 +41,6 @@ const GDPR = () => {
             height: 270px;
             position: fixed;
             z-index: 11111;
-            border: 1px solid green;
             border-radius: 12px;
             background: white;
             font-weight: 400;
