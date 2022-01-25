@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 // assets
 import options from './../assets/options.svg';
@@ -102,9 +102,8 @@ const GDPR = () => {
                             <div><img src={options} /></div>
                         </div>
                         <span>
-
-
-                        Vi bruger cookies som en hjælp til at tilpasse indholdet, levere relevante annoncer samt give en mere sikker oplevelse. Læs mere, om brug af cookies og kontroller i vores <a href="#" className="consent__overlay--policy">politik om cookies.</a> Du kan gennemse dine kontroller når som helst.</span>
+                          Vi bruger cookies som en hjælp til at tilpasse indholdet, levere relevante annoncer samt give en mere sikker oplevelse. Læs mere, om brug af cookies og kontroller i vores <a href="#" className="consent__overlay--policy">politik om cookies.</a> Du kan gennemse dine kontroller når som helst.
+                        </span>
                         <hr />
                         <button onClick={handle1} className="consent__overlay--button">Acceptér alle</button>
                         <hr />
