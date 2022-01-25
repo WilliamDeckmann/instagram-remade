@@ -139,8 +139,8 @@ const Slider = () => {
 
   return (
       <div css={slider}>
-          <div className="slider__item1">Suggestions For You</div>
-          <div className="slider__item2">See All</div>
+          <div className="slider__item1">Forslag til dig</div>
+          <div className="slider__item2">Se Alle</div>
           <div className="buttonbackground slider__item3">
               <div className="imageconstraint">
                   <img src={arrowwhite} className="arrowleft" />
