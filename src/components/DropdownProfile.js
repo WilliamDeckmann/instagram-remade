@@ -1,15 +1,15 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 
 const DropdownProfile = () => {
-    
     // Style
     const styles = css`
     
         position: absolute;
-        display: block;
+        display: ${({open}) => open ? 'block' : 'none'};
         margin-top: 52px;
         background-color: white;
         box-shadow: 1px 3px 15px -1px rgba(0,0,0,0.57);

@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
 import { Link } from "react-router-dom";
-
+import DropdownProfile from "../components/DropdownProfile";
 import heart from '../assets/heart.svg'
 import home from '../assets/home.svg'
 import paperplane from '../assets/paperplane.svg'

@@ -14,6 +14,7 @@ import NavbarMain from './NavbarMain';
 import ThinText from "../components/ThinText";
 import GDPR from "../components/GDPR";
 import DropdownProfile from "../components/DropdownProfile"
+import HoverDropdown from "../components/HoverDropdown"
 
 
 function App() {
