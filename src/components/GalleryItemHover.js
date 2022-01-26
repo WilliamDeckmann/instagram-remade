@@ -8,6 +8,7 @@ import ProfileCard from "../templates/ProfileCard";
 // Components
 import SocialIcon from "../components/SocialIcon";
 import ThinText from "../components/ThinText";
+import CloseButton from "./CloseButton";
 
 // Assets
 import HeartActiveWhite from "../assets/heartactivewhite.svg";
@@ -100,10 +101,10 @@ const GalleryItemHover = (props) => {
             </main>
             {clickState && 
             <div className="Gallery-item-hover__card">
-                <button className="Gallery-item-hover__exit-button"
+                <div className="Gallery-item-hover__exit-button"
                 onClick={() => setClickState(!clickState)}>
-                    X
-                </button>
+                    <CloseButton />
+                </div>
                 <ProfileCard {...props} />
             </div>}
         </div>
