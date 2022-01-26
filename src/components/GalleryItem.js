@@ -36,7 +36,7 @@ const GalleryItem = (props) => {
         <div className="Gallery-item" css={styles}>
             <button className="Gallery-item__button">
                 <PostImage img={props.media_url} alt="image"/>
-                <GalleryItemHover />
+                <GalleryItemHover {...props} />
             </button>
         </div>
     );

@@ -11,6 +11,7 @@ import BookmarkGallery from "../templates/BookmarkGallery";
 // Components
 import ThinText from "../components/ThinText";
 import Footer from "../components/Footer";
+import ProfileCard from "../templates/ProfileCard";
 
 const Profile = () => {
 
@@ -39,19 +40,19 @@ const Profile = () => {
   `;
 
   return (
-      <div className="Profile" css={styles}>
-          <main className="Profile__main">
-              <UserInfo />
-              <ProfileMenu />
-              <Routes>
-                  <Route exact path="/" element={<ProfileGallery />} />
-                  <Route exact path="/saved" element={<BookmarkGallery />} />
-                  <Route exact path="/tagged" element="" />
-                  <Route path="*" element={<ThinText text="Nothing found..." />} />
-              </Routes>
-              <div className="footermargin"><Footer /></div>
-          </main>
-      </div>
+        <div className="Profile" css={styles}>
+            <main className="Profile__main">
+                <UserInfo />
+                <ProfileMenu />
+                <Routes>
+                    <Route exact path="/" element={<ProfileGallery />} />
+                    <Route exact path="/saved" element={<BookmarkGallery />} />
+                    <Route exact path="/tagged" element="" />
+                    <Route path="*" element={<ThinText text="Nothing found..." />} />
+                </Routes>
+                <div className="footermargin"><Footer /></div>
+            </main>
+        </div>
   );
 }
 
