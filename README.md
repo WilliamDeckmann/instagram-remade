@@ -11,6 +11,6 @@ Formål: At genskabe Instagrams layout og gøre brug af af deres developer-API t
 - Aske
 
 ## Link til GitHub pages
-#### (Virker bedst på mobil)
+#### (Virker bedst på desktop)
 
 - https://williamdeckmann.github.io/instagram-remade/
