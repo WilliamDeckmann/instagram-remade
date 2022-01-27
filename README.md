@@ -1,22 +1,16 @@
-# instagram-clone
+# instagram-remade
 
-## Collaborators
+lavet af: William Deckmann
+
+Formål: At genskabe Instagrams layout og gøre brug af af deres developer-API til at hente data udefra
+
+## Contributors
 
 - Daniel/Caia
-- William
 - Mathias
 - Aske
-- (Mads)
 
-## Aflevering
+## Link til GitHub pages
+#### (Virker bedst på mobil)
 
-- Til Fredag den 21. Januar
-
-## links
-
-- api
-- https://developers.facebook.com/docs/instagram-basic-display-api/getting-started
-- https://developers.facebook.com/docs/instagram-api/
-- pages
-- https://www.instagram.com/
-- https://www.instagram.com/rtswu06/
+- https://williamdeckmann.github.io/instagram-remade/
